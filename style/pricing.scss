@@ -156,15 +156,15 @@ h4 {
 // --- PRICING HERO SECTION ---
 
 .hero-pricing {
-  display: flex; // Kjo i rreshton tekstin dhe foton krah për krah
-  align-items: stretch; // Detyron të dyja pjesët të kenë lartësi të barabartë
+  display: flex; 
+  align-items: stretch;
   width: 100%;
-  min-height: 500px; // Lartësia që kërkon template-i
-  background-color: #333645; // Ngjyra e errët e sfondit majtas
+  min-height: 500px; 
+  background-color: $color-dark; 
   overflow: hidden;
 
   &__container {
-    flex: 0.9/1; // Zë 50% të gjerësisë
+    flex: 0.9/1; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,13 +180,12 @@ h4 {
       gap: 10px;
       color: #fff;
       font-size: 14px;
-      text-transform: uppercase;
       margin-bottom: 20px;
 
       .marker {
         width: 12px;
         height: 12px;
-        background-color: #40ddb6;
+        background-color: $color-mint;
       }
     }
 
@@ -200,20 +199,20 @@ h4 {
   }
 
   &__image-box {
-    flex: 1.1; // Zë 50% e mbetur të gjerësisë
+    flex: 1.1; 
     position: relative;
 
     img {
       width: 100%;
-      height: 100%; // Kjo e detyron foton të marrë lartësinë e tekstit
-      object-fit: cover; // Kjo siguron që personat të mos shtrembërohen
-      object-position: center; // I mban personat në qendër të kutisë
+      height: 100%; 
+      object-fit: cover; 
+      object-position: center; 
       display: block;
     }
   }
 }
 
-// Për celular që të mos thyhet dizajni
+
 @media (max-width: 991px) {
   .hero-pricing {
     flex-direction: column;
@@ -224,24 +223,25 @@ h4 {
   }
 }
 
-// Seksioni i Pricing
+// --- PRICING SECTION ---
+
 .pricing-area {
   padding: 100px 0;
   text-align: center;
 
   .pricing-flex-container {
-    display: flex; // Ky rreshton kartat krah për krah
+    display: flex; 
     justify-content: center;
     align-items: stretch;
     max-width: 1200px;
     margin: 50px auto 0;
-    gap: 0; // I mban kartat ngjitur
+    gap: 0;
   }
 }
 
 .pricing-header {
-  text-align: center; // Qendëron gjithë tekstin
-  margin-bottom: 50px; // Hapësira midis titullit dhe kartave
+  text-align: center; 
+  margin-bottom: 50px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,7 +251,7 @@ h4 {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    color: #333; // Ose ngjyra që ke në figma
+    color:$color-dark; 
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -259,21 +259,21 @@ h4 {
     .marker {
       width: 10px;
       height: 10px;
-      background-color: #40ddb6; // Ngjyra mint e template-it
+      background-color: #40ddb6; 
       display: inline-block;
     }
   }
 
   .section-title {
-    font-size: 40px; // Madhësia sipas Figma
-    color: #1f2232; // Ngjyra e errët e tekstit
+    font-size: 40px; 
+    color: #1f2232; 
     line-height: 1.2;
     font-weight: 700;
     margin: 0;
 
     br {
       @media (max-width: 768px) {
-        display: none; // Hiqet thyerja e rreshtit në celular
+        display: none; 
       }
     }
   }
@@ -282,9 +282,9 @@ h4 {
 .pricing-area {
   padding: 100px 0;
   background-color: #ffffff;
-  font-family: "Inter", sans-serif; // Ose fontin që po përdor
+  font-family: "Inter", sans-serif;
 
-  // 2. Header-i (Titulli dhe Subtitle)
+  // 2. Header
   .pricing-header {
     text-align: center;
     margin-bottom: 60px;
@@ -319,11 +319,12 @@ h4 {
     }
   }
 
-  // 3. Kontejneri i Kartave
+  // 3. Cards Container
+
   .pricing-flex-container {
     display: flex;
     justify-content: center;
-    align-items: stretch; // Siguron që të gjitha kanë lartësi të barabartë
+    align-items: stretch; 
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -386,10 +387,10 @@ h4 {
       padding: 0;
       margin: 0 0 40px 0;
       width: 100%;
-      color: #646672 !important; // Gri e errët për tekstin normal
+      color: #646672 !important; 
 
       strong {
-        color: #1f2232 !important; // E zezë/Navy për fjalët e theksuara
+        color: #1f2232 !important; 
         font-weight: 700 !important;
       }
 
@@ -431,13 +432,13 @@ h4 {
       }
     }
 
-    // 5. Stili për kartën "Featured" (Advanced)
+  //  Featured Card//
     &.featured {
       background-color: $color-purple;
       color: #ffffff;
       border: none;
       position: relative;
-      transform: scale(1.05); // Pak më e madhe se të tjerat
+      transform: scale(1.05); 
       z-index: 2;
       box-shadow: 0 20px 40px rgba(107, 124, 255, 0.2);
 
@@ -463,10 +464,10 @@ h4 {
 
       .feature-list li {
         border-bottom-color: rgba(255, 255, 255, 0.1);
-         color: #ffffff !important; // Teksti normal i bardhë
+         color: #ffffff !important; 
          
          strong {
-        color: #40DDB6 !important; // MINT vetëm për fjalët strong
+        color: #40DDB6 !important; 
         font-weight: 700 !important;
       }
     }
