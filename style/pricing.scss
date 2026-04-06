@@ -1,0 +1,759 @@
+// 1. VARIABLAT (Style Guide)
+$color-mint: #40ddb6;
+$color-purple: #6b7cff;
+$color-dark: #37393f;
+$color-gray: #7d7d7d;
+$color-light-bg: #f4f4f4;
+$color-white: #ffffff;
+
+$font-main: "Inter", sans-serif;
+$font-heading: "Poppins", sans-serif;
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  line-height: 1.1;
+}
+//Reset//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+// TOP BAR STYLES
+.top-bar {
+  background-color: $color-dark;
+  color: $color-white;
+  padding: 12px 0;
+  font-size: 14px;
+  height: 50px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-family: $font-main;
+  }
+
+  i {
+    color: $color-mint;
+    margin-right: 8px;
+  }
+  .social-icons i {
+    margin-right: 0;
+    color: $color-white;
+  }
+  .span {
+    display: flex;
+    align-items: center;
+    color: $color-white;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 15px;
+
+    a {
+      color: white;
+      font-size: 14px;
+      transition: 0.3s;
+      &:hover {
+        color: $color-mint;
+      }
+    }
+  }
+}
+
+// NAVBAR STYLES
+.navbar {
+  background-color: $color-white;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+    a {
+      text-decoration: none;
+      color: $color-dark;
+      font-family: $font-main;
+      font-weight: 600;
+      font-size: 16px;
+      transition: 0.3s;
+
+      &:hover {
+        color: $color-purple;
+      }
+    }
+
+    i {
+      font-size: 10px;
+      margin-left: 5px;
+    }
+  }
+}
+
+// BUTTON STYLE
+.btn--primary {
+  background-color: $color-purple;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: darken($color-mint, 10%);
+  }
+}
+
+// --- PRICING HERO SECTION ---
+
+.hero-pricing {
+  display: flex; // Kjo i rreshton tekstin dhe foton krah për krah
+  align-items: stretch; // Detyron të dyja pjesët të kenë lartësi të barabartë
+  width: 100%;
+  min-height: 500px; // Lartësia që kërkon template-i
+  background-color: #333645; // Ngjyra e errët e sfondit majtas
+  overflow: hidden;
+
+  &__container {
+    flex: 0.9/1; // Zë 50% të gjerësisë
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5%;
+  }
+
+  &__content {
+    max-width: 500px;
+
+    .subtitle-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      .marker {
+        width: 12px;
+        height: 12px;
+        background-color: #40ddb6;
+      }
+    }
+
+    .hero-title {
+      color: #ffffff;
+      font-size: 55px;
+      line-height: 1.1;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+
+  &__image-box {
+    flex: 1.1; // Zë 50% e mbetur të gjerësisë
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%; // Kjo e detyron foton të marrë lartësinë e tekstit
+      object-fit: cover; // Kjo siguron që personat të mos shtrembërohen
+      object-position: center; // I mban personat në qendër të kutisë
+      display: block;
+    }
+  }
+}
+
+// Për celular që të mos thyhet dizajni
+@media (max-width: 991px) {
+  .hero-pricing {
+    flex-direction: column;
+
+    &__image-box {
+      height: 350px;
+    }
+  }
+}
+
+// Seksioni i Pricing
+.pricing-area {
+  padding: 100px 0;
+  text-align: center;
+
+  .pricing-flex-container {
+    display: flex; // Ky rreshton kartat krah për krah
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    gap: 0; // I mban kartat ngjitur
+  }
+}
+
+.pricing-header {
+  text-align: center; // Qendëron gjithë tekstin
+  margin-bottom: 50px; // Hapësira midis titullit dhe kartave
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subtitle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #333; // Ose ngjyra që ke në figma
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    .marker {
+      width: 10px;
+      height: 10px;
+      background-color: #40ddb6; // Ngjyra mint e template-it
+      display: inline-block;
+    }
+  }
+
+  .section-title {
+    font-size: 40px; // Madhësia sipas Figma
+    color: #1f2232; // Ngjyra e errët e tekstit
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0;
+
+    br {
+      @media (max-width: 768px) {
+        display: none; // Hiqet thyerja e rreshtit në celular
+      }
+    }
+  }
+}
+
+.pricing-area {
+  padding: 100px 0;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif; // Ose fontin që po përdor
+
+  // 2. Header-i (Titulli dhe Subtitle)
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .subtitle-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $color-dark;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+
+      .marker {
+        width: 12px;
+        height: 12px;
+        background-color: $color-mint;
+      }
+    }
+
+    .section-title {
+      color: $color-dark;
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+  }
+
+  // 3. Kontejneri i Kartave
+  .pricing-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; // Siguron që të gjitha kanë lartësi të barabartë
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  // 4. Stili Bazë i Kartës
+  .pricing-card {
+    background: #ffffff;
+    border: 1px solid $color-light-bg;
+    padding: 50px 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    h3 {
+      font-size: 24px;
+      color: $color-dark;
+      margin-bottom: 15px;
+    }
+
+    .price-tag {
+      font-size: 50px;
+      font-weight: 800;
+      color: $color-dark;
+      margin-bottom: 5px;
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-gray;
+      }
+    }
+
+    .billed-label {
+      background-color: $color-mint;
+      color: $color-dark;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 15px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+
+      &.transparent {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+      }
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+      width: 100%;
+      color: #646672 !important; // Gri e errët për tekstin normal
+
+      strong {
+        color: #1f2232 !important; // E zezë/Navy për fjalët e theksuara
+        font-weight: 700 !important;
+      }
+
+      li {
+        padding: 12px 0;
+        color: $color-gray;
+        font-size: 15px;
+        border-bottom: 1px solid #f0f0f0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    // Butonat
+    .btn {
+      width: 100%;
+      padding: 15px;
+      border-radius: 5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+
+      &-purple {
+        background-color: $color-purple;
+        color: #ffffff;
+        &:hover {
+          background-color: darken($color-purple, 10%);
+        }
+      }
+
+      &-white {
+        background-color: #ffffff;
+        color: $color-purple;
+        &:hover {
+          background-color: $color-light-bg;
+        }
+      }
+    }
+
+    // 5. Stili për kartën "Featured" (Advanced)
+    &.featured {
+      background-color: $color-purple;
+      color: #ffffff;
+      border: none;
+      position: relative;
+      transform: scale(1.05); // Pak më e madhe se të tjerat
+      z-index: 2;
+      box-shadow: 0 20px 40px rgba(107, 124, 255, 0.2);
+
+      .popular-tag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $color-mint;
+        color: $color-dark;
+        padding: 8px 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h3,
+      .price-tag,
+      .price-tag span,
+      .feature-list li {
+        color: #ffffff;
+      }
+
+      .feature-list li {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+         color: #ffffff !important; // Teksti normal i bardhë
+         
+         strong {
+        color: #40DDB6 !important; // MINT vetëm për fjalët strong
+        font-weight: 700 !important;
+      }
+    }
+      
+      
+    }
+  }
+}
+// footer//
+
+.footer {
+  background-color: $color-dark;
+  padding: 80px 0 40px;
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+  }
+
+  // Top Bar Styles
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .footer-logo-img {
+        width: 180px;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .footer-contacts {
+      display: flex;
+      gap: 40px;
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        .icon-circle {
+          width: 50px;
+          height: 50px;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          i {
+            color: $color-mint;
+            font-size: 18px;
+          }
+        }
+        .contact-text {
+          display: flex;
+          flex-direction: column;
+          .label {
+            font-weight: 700;
+            font-size: 14px;
+          }
+          .value {
+            color: $color-gray;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  // Main Content - 4 Kolonat
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding: 20px 0;
+
+    .footer-col {
+      h3 {
+        color: $color-mint;
+        font-size: 18px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        .marker {
+          width: 8px;
+          height: 8px;
+          background-color: $color-purple;
+          margin-right: 10px;
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin-bottom: 12px;
+          a {
+            color: $color-gray;
+            text-decoration: none;
+            font-size: 15px;
+            &.active {
+              color: $color-mint;
+              text-decoration: underline;
+            }
+            &:hover {
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-subscribe {
+      .subscribe-card {
+        background-color: #474950;
+        padding: 40px;
+        h3 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 14px;
+          color: $color-gray;
+          margin-bottom: 25px;
+        }
+        .form-group {
+          display: flex;
+          input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            outline: none;
+          }
+          button {
+            background-color: $color-purple;
+            color: #fff;
+            border: none;
+            padding: 0 20px;
+            font-weight: 600;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  // Bottom Bar
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: $color-gray;
+
+    .mint {
+      color: $color-mint;
+    }
+    .purple {
+      color: $color-purple;
+      font-weight: 700;
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      span {
+        font-weight: 700;
+        color: $color-white;
+        margin-right: 5px;
+      }
+      a {
+        color: $color-white;
+        font-size: 16px;
+        &:hover {
+          color: $color-mint;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE DESIGN (Tablet & Mobile)//
+
+// 1. Tablets and small laptops ( under 1024px)
+@media (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .hero-split,
+  .intro,
+  .appointment-wrapper,
+  .choose-us,
+  .testimonial-flex-wrapper {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .hero-split__dark,
+  .hero-split__image,
+  .intro__left,
+  .intro__right,
+  .content-wrapper,
+  .image-area,
+  .info-side,
+  .form-side,
+  .testimonial-content,
+  .testimonial-cards-grid {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 40px 20px !important;
+  }
+
+  .image-area {
+    position: static !important;
+    height: 400px !important;
+  }
+
+  .testimonial-content {
+    text-align: center;
+    max-width: 100% !important;
+    .subtitle-wrapper {
+      justify-content: center;
+    }
+  }
+}
+
+// 2. MOBILE (under 768px)
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px !important;
+    line-height: 1.3;
+  }
+
+  .services-grid,
+  .projects-row,
+  .posts-grid,
+  .footer-main {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .service-box,
+  .project-item,
+  .post-card {
+    width: 100% !important;
+  }
+
+  .testimonial-cards-grid {
+    gap: 20px !important;
+    .testimonial-card {
+      padding: 25px !important;
+    }
+  }
+
+  .top-bar {
+    display: none !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
