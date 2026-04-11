@@ -206,7 +206,7 @@ img {
 }
 
 .get-in-touch {
-  padding: 90px 0;
+  padding-top: 90px;
 }
 
 .touch-inner {
@@ -353,6 +353,211 @@ img {
 .form-submit .btn-primary {
   padding: 14px 48px;
   font-size: 1rem;
+}
+
+/* ===============================
+   RESPONSIVE FIXES
+================================ */
+/* ---------- 992px ---------- */
+@media (max-width: 992px) {
+  /* NAVBAR */
+  .nav-links {
+    display: none;
+  }
+  .nav-inner {
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 25px;
+  }
+  .btn-primary {
+    padding: 12px 22px;
+    font-size: 15px;
+  }
+  /* HERO */
+  .hero {
+    min-height: unset;
+  }
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-content, .hero-image-box {
+    width: 100%;
+  }
+  .hero-content {
+    padding: 50px 40px;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .hero-image-box {
+    height: 300px;
+  }
+  /* GET IN TOUCH */
+  .touch-inner {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 30px;
+  }
+  .touch-image {
+    width: 100%;
+    height: 400px;
+  }
+  .touch-content {
+    width: 100%;
+  }
+  /* CALLBACK */
+  .callback-section {
+    padding: 70px 30px;
+  }
+}
+/* ---------- 768px ---------- */
+@media (max-width: 768px) {
+  /* TOPBAR */
+  .topbar-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .topbar-left,
+  .topbar-right {
+    justify-content: center;
+  }
+  /* HERO */
+  .hero-content {
+    padding: 40px 25px;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+  .hero-image-box {
+    height: 250px;
+  }
+  /* GET IN TOUCH */
+  .touch-title {
+    font-size: 32px;
+  }
+  .touch-desc {
+    font-size: 16px;
+  }
+  .touch-image {
+    height: 320px;
+  }
+  /* CONTACT ITEMS */
+  .contact-item {
+    align-items: flex-start;
+  }
+  /* CALLBACK */
+  .callback-title {
+    font-size: 32px;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .form-row input {
+    width: 100%;
+  }
+}
+/* ---------- 576px ---------- */
+@media (max-width: 576px) {
+  /* TOPBAR */
+  .topbar-inner {
+    padding: 10px 15px;
+    align-items: flex-start;
+  }
+  .topbar-left, .topbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  /* NAV */
+  .nav-inner {
+    padding: 0 15px;
+    gap: 10px;
+    height: auto;
+    min-height: 70px;
+  }
+  .logo {
+    font-size: 17px;
+  }
+  .btn-primary {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  /* HERO */
+  .hero-content {
+    padding: 35px 20px;
+  }
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-image-box {
+    height: 200px;
+  }
+  /* GET IN TOUCH */
+  .get-in-touch {
+    padding-top: 60px;
+  }
+  .touch-inner {
+    padding: 0 20px;
+    gap: 30px;
+  }
+  .touch-image {
+    height: 250px;
+  }
+  .touch-title {
+    font-size: 26px;
+  }
+  .touch-desc {
+    font-size: 15px;
+  }
+  .contact-items {
+    gap: 18px;
+  }
+  .contact-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+  }
+  .contact-label {
+    font-size: 14px;
+  }
+  .contact-value {
+    font-size: 15px;
+  }
+  /* CALLBACK */
+  .callback-section {
+    padding: 55px 20px;
+  }
+  .callback-title {
+    font-size: 26px;
+  }
+  .form-row {
+    gap: 14px;
+  }
+  .form-row input,
+  .form-row textarea {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+  .form-submit .btn-primary {
+    width: 100%;
+  }
+}
+/* ---------- 400px ---------- */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 24px;
+  }
+  .touch-title,
+  .callback-title {
+    font-size: 22px;
+  }
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=contact.css.map */
