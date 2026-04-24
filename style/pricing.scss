@@ -1,0 +1,341 @@
+@import "main";
+
+//  PRICING HERO SECTION //
+
+
+.pricing-hero {
+  @include hero-base("../images/hero-pricing.png", 50%);
+}
+
+// PRICING CARDS SECTION //
+
+
+.pricing-area {
+  padding: 100px 0;
+  background-color: $color-white;
+
+  .pricing-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 60px;
+
+    .subtitle-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+
+      .marker {
+        width: 12px;
+        height: 12px;
+        background-color: $color-mint;
+        display: inline-block;
+      }
+
+      span {
+        font-size: $fs-small;
+        font-weight: $fw-semibold;
+        color: $color-dark;
+        letter-spacing: 1px;
+      }
+    }
+
+    .section-title {
+      font-size: $fs-h2;
+      font-weight: $fw-bold;
+      color: $color-dark;
+      margin: 0;
+      line-height: 1.2;
+      font-family: $font-heading;
+    }
+  }
+
+  .pricing-flex-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .pricing-card {
+    background: $color-white;
+    border: 1px solid $color-light-bg;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    transition: $transition-speed;
+    border-radius: 8px;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-dark;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: $color-dark;
+      margin-bottom: 15px;
+      font-weight: $fw-bold;
+      font-family: $font-heading;
+    }
+
+    .price-tag {
+      font-size: 48px;
+      font-weight: 800;
+      color: $color-dark;
+      margin-bottom: 5px;
+      font-family: $font-heading;
+
+      span {
+        font-size: $fs-body;
+        font-weight: $fw-medium;
+        color: $color-gray;
+      }
+    }
+
+    .billed-label {
+      background-color: $color-mint;
+      color: $color-dark;
+      font-size: 13px;
+      font-weight: $fw-semibold;
+      padding: 6px 16px;
+      margin-bottom: 30px;
+      display: inline-block;
+      border-radius: 4px;
+      width: fit-content;
+
+      &.transparent {
+        background-color: rgba(107, 124, 255, 0.1);
+        color: $color-purple;
+      }
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+      width: 100%;
+
+      li {
+        padding: 12px 0;
+        color: $color-gray;
+        font-size: 15px;
+        border-bottom: 1px solid $color-light-gray;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        i {
+          color: $color-mint;
+          font-size: $fs-small;
+          width: 18px;
+        }
+
+        strong {
+          color: $color-dark;
+          font-weight: $fw-bold;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 6px;
+      font-weight: $fw-bold;
+      text-decoration: none;
+      text-align: center;
+      transition: $transition-speed;
+      font-family: $font-main;
+      display: inline-block;
+
+      &-purple {
+        background-color: $color-purple;
+        color: $color-white;
+
+        &:hover {
+          background-color: darken($color-purple, 10%);
+        }
+      }
+
+      &-white {
+        background-color: transparent;
+        color: $color-purple;
+        border: 2px solid $color-purple;
+
+        &:hover {
+          background-color: $color-purple;
+          color: $color-white;
+        }
+      }
+    }
+
+    &.featured {
+      background-color: $color-purple;
+      border: none;
+      position: relative;
+      transform: scale(1.02);
+      z-index: 2;
+      box-shadow: 0 20px 40px rgba(107, 124, 255, 0.2);
+
+      .popular-tag {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-mint;
+        color: $color-dark;
+        padding: 6px 20px;
+        font-size: 12px;
+        font-weight: $fw-bold;
+        border-radius: 20px;
+        white-space: nowrap;
+      }
+
+      h3,
+      .price-tag,
+      .price-tag span {
+        color: $color-white;
+      }
+
+      .feature-list li {
+        color: rgba(255, 255, 255, 0.8);
+        border-bottom-color: rgba(255, 255, 255, 0.15);
+
+        i {
+          color: $color-mint;
+        }
+
+        strong {
+          color: $color-white;
+        }
+      }
+
+      .billed-label {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: $color-white;
+      }
+      // Shto këtë brenda .pricing-card.featured
+      .btn {
+        background-color: $color-white;
+        color: $color-purple;
+        border: none;
+
+        &:hover {
+          background-color: $color-mint;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+//  RESPONSIVE - PRICING CARDS //
+
+
+@include respond-to("desktop") {
+  .pricing-area {
+    .pricing-flex-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .pricing-card.featured {
+      transform: scale(1);
+    }
+  }
+}
+
+@include respond-to("tablet") {
+  .pricing-area {
+    padding: 70px 0;
+
+    .pricing-header {
+      margin-bottom: 40px;
+
+      .section-title {
+        font-size: 32px;
+      }
+    }
+
+    .pricing-flex-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      max-width: 450px;
+    }
+  }
+}
+
+@include respond-to("mobile") {
+  .pricing-area {
+    padding: 50px 0;
+
+    .pricing-header {
+      .section-title {
+        font-size: 28px;
+      }
+    }
+
+    .pricing-flex-container {
+      gap: 25px;
+      padding: 0 16px;
+      align-items: center;
+    }
+
+    .pricing-card {
+      padding: 30px 20px;
+      align-items: center;
+
+      h3 {
+        font-size: 22px;
+      }
+
+      .price-tag {
+        font-size: 40px;
+      }
+
+      .feature-list li {
+        font-size: $fs-small;
+        padding: 10px 0;
+      }
+
+      .btn {
+        padding: 12px;
+        font-size: $fs-small;
+      }
+    }
+  }
+}
+
+@include respond-to("mobile-small") {
+  .pricing-area {
+    .pricing-header .section-title {
+      font-size: 24px;
+    }
+
+    .pricing-card {
+      padding: 25px 16px;
+      align-items: center;
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .price-tag {
+        font-size: 36px;
+      }
+
+      .feature-list li {
+        font-size: 13px;
+        padding: 8px 0;
+      }
+    }
+  }
+}
