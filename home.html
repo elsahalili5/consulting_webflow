@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WhiteCollar | Business & Consulting</title>
-    <link rel="icon" type="image/png" href="images/logo-icon.svg">
-    <title>White Collar | Business Consulting</title>
-    <link  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"/>
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="icon" type="image/png" href="images/logo-icon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/home.css" />
   </head>
   <body>
     <div class="site-wrapper">
-      <header class="header">
+      <header class="header inner-container">
         <div class="top-bar">
           <div class="container">
             <div class="top-bar__left">
@@ -54,6 +59,10 @@
             <div class="logo">
               <img src="./images/Logo.svg" alt="WhiteCollar Logo" />
             </div>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">
+              <i class="fa-solid fa-bars"></i>
+            </button>
 
             <ul class="nav-links">
               <li><a href="#">Home</a></li>
@@ -99,15 +108,16 @@
           </div>
 
           <div class="hero-split__image">
-            <img src="./images/hero.png" alt="WhiteCollar Team" />
+            <img src="./images/hero-home.png" alt="WhiteCollar Team" />
           </div>
         </section>
+        
         <section class="intro" id="about">
           <div class="intro__left">
             <div class="intro__card">
               <div class="intro__image">
                 <img
-                  src="./images/hero.svg"
+                  src="./images/intro.png"
                   alt="Team"
                   class="intro__card-img"
                 />
@@ -372,7 +382,7 @@
               <div class="testimonial-intro">
                 <div class="subtitle-wrapper">
                   <span class="mint-square"></span>
-                  <span class="subtitle-text">TESTIMONIAL</span>
+                  <span class="subtitle-text">Testimonial</span>
                 </div>
                 <h2 class="main-title">
                   What Our <br />
@@ -625,8 +635,10 @@
           <div class="footer-top">
             <div class="footer-brand">
               <a href="/">
-               <img
-                  src="images/Logo2.svg"alt="WhiteCollar Logo" class="footer-logo-img"
+                <img
+                  src="images/Logo2.svg"
+                  alt="WhiteCollar Logo"
+                  class="footer-logo-img"
                 />
               </a>
             </div>
@@ -725,5 +737,15 @@
         </div>
       </footer>
     </div>
+    <script>
+      document.querySelectorAll(".navbar").forEach(function (navbar) {
+        var toggle = navbar.querySelector(".nav-toggle");
+        if (!toggle) return;
+        toggle.addEventListener("click", function () {
+          var isOpen = navbar.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      });
+    </script>
   </body>
 </html>

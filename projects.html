@@ -1,14 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects-White Collar</title><link rel="icon" type="image/svg+xml" href="images/logo-icon.svg" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects-White Collar</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"/>
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-    <link rel="stylesheet" href="css/projects.css" />
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/projects.css" />
   </head>
   <body>
     <div class="site-wrapper">
@@ -54,6 +60,15 @@
               <img src="./images/Logo.svg" alt="WhiteCollar Logo" />
             </div>
 
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-label="Open navigation"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
             <ul class="nav-links">
               <li><a href="#">Home</a></li>
               <li><a href="#">About Us</a></li>
@@ -71,118 +86,145 @@
           </div>
         </nav>
       </header>
-        <main>
-            <section class="projects-hero">
-              <div class="container">
-                 <div class="hero-text-content">
-                   <div class="subtitle-wrapper">
-                   <div class="marker"></div>  <span class="subtitle-text"> The Case Studies</span>
-                  </div>
-                     <h1>Our Latest<br> Projects</h1>
-                </div>
-               </div>
-            </section>
-    
-            <section class="projects-grid-area">
-               <div class="container">
-                   <div class="grid-header">
-            <div class="subtitle-wrapper centered">
+      <main>
+        <section class="projects-hero">
+          <div class="projects-hero__dark">
+            <div class="projects-hero__content">
+              <div class="subtitle-wrapper">
+                <span class="marker"></span>
+                <span class="subtitle-text">The Case Studies</span>
+              </div>
+              <h1 class="hero-title">
+                Our Latest<br />
+                Projects
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects-grid-area">
+          <div class="container">
+            <div class="grid-header">
+              <div class="subtitle-wrapper centered">
                 <div class="marker"></div>
                 <span>Latest Projects</span>
-            </div>
-            <h2>Discover our latest client projects</h2>
-            <p>
-                Leverage agile frameworks to provide a robust synopsis for high level overviews. 
-                Iterative approaches to corporate strategy foster collaborative thinking to further the overall value.
-            </p>
-        </div>
-
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/project1.png" alt="Financial Investment">
-                </div>
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Financial Investment</h3>
-                        <span class="project-date"><i class="far fa-calendar-alt"></i> Sep 2022</span>
-                    </div>
-                    <div class="project-arrow"><i class="fas fa-chevron-right"></i></div>
-                </div>
+              </div>
+              <h2>Discover our latest client projects</h2>
+              <p>
+                Leverage agile frameworks to provide a robust synopsis for high
+                level overviews. Iterative approaches to corporate strategy
+                foster collaborative thinking to further the overall value.
+              </p>
             </div>
 
-            <div class="project-card">
+            <div class="projects-grid">
+              <div class="project-card">
                 <div class="project-image">
-                    <img src="images/project2.png" alt="Marketing Strategy">
+                  <img src="images/project1.png" alt="Financial Investment" />
                 </div>
                 <div class="project-content">
-                    <div class="project-text">
-                        <h3>Marketing Strategy</h3>
-                        <span class="project-date"><i class="far fa-calendar-alt"></i> Sep 2022</span>
-                    </div>
-                    <div class="project-arrow"><i class="fas fa-chevron-right"></i></div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/project3.png" alt="Business Consulting">
-                </div>
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Business Consulting</h3>
-                        <span class="project-date"><i class="far fa-calendar-alt"></i> Sep 2022</span>
-                    </div>
-                    <div class="project-arrow"><i class="fas fa-chevron-right"></i></div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/project4.png" alt="Financial Investment">
-                </div>
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Financial Investment</h3>
-                        <span class="project-date"><i class="far fa-calendar-alt"></i> Sep 2022</span>
-                    </div>
-                    <div class="project-arrow"><i class="fas fa-chevron-right"></i></div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/project5.png" alt="Web Development">
-                </div>
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Web Development</h3>
-                        <span class="project-date"><i class="far fa-calendar-alt"></i> Sep 2022</span>
-                    </div>
-                    <div class="project-arrow"><i class="fas fa-chevron-right"></i></div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/project6.png" alt="Financial Investment">
-                </div>
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Financial Investment</h3>
-                        <span class="project-date"><i class="far fa-calendar-alt"></i> Sep 2022</span>
-                    </div>
-                    <div class="project-arrow"><i class="fas fa-chevron-right"></i></div>
+                  <div class="project-text">
+                    <h3>Financial Investment</h3>
+                    <span class="project-date"
+                      ><i class="far fa-calendar-alt"></i> Sep 2022</span
+                    >
+                  </div>
+                  <div class="project-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
                 </div>
               </div>
 
-               </div>
-            </div>
-          </section> 
-        </main>
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="images/project2.png" alt="Marketing Strategy" />
+                </div>
+                <div class="project-content">
+                  <div class="project-text">
+                    <h3>Marketing Strategy</h3>
+                    <span class="project-date"
+                      ><i class="far fa-calendar-alt"></i> Sep 2022</span
+                    >
+                  </div>
+                  <div class="project-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
 
-         <footer class="footer">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="images/project3.png" alt="Business Consulting" />
+                </div>
+                <div class="project-content">
+                  <div class="project-text">
+                    <h3>Business Consulting</h3>
+                    <span class="project-date"
+                      ><i class="far fa-calendar-alt"></i> Sep 2022</span
+                    >
+                  </div>
+                  <div class="project-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="images/project4.png" alt="Financial Investment" />
+                </div>
+                <div class="project-content">
+                  <div class="project-text">
+                    <h3>Financial Investment</h3>
+                    <span class="project-date"
+                      ><i class="far fa-calendar-alt"></i> Sep 2022</span
+                    >
+                  </div>
+                  <div class="project-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="images/project5.png" alt="Web Development" />
+                </div>
+                <div class="project-content">
+                  <div class="project-text">
+                    <h3>Web Development</h3>
+                    <span class="project-date"
+                      ><i class="far fa-calendar-alt"></i> Sep 2022</span
+                    >
+                  </div>
+                  <div class="project-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="images/project6.png" alt="Financial Investment" />
+                </div>
+                <div class="project-content">
+                  <div class="project-text">
+                    <h3>Financial Investment</h3>
+                    <span class="project-date"
+                      ><i class="far fa-calendar-alt"></i> Sep 2022</span
+                    >
+                  </div>
+                  <div class="project-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
         <div class="footer-container">
           <div class="footer-top">
             <div class="footer-brand">
@@ -289,16 +331,15 @@
         </div>
       </footer>
     </div>
+    <script>
+      document.querySelectorAll(".navbar").forEach(function (navbar) {
+        var toggle = navbar.querySelector(".nav-toggle");
+        if (!toggle) return;
+        toggle.addEventListener("click", function () {
+          var isOpen = navbar.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      });
+    </script>
   </body>
-</html>
-
-
-
-
-
-                          
-
-
-    
-</body>
 </html>
