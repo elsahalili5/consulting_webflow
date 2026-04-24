@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us – WhiteCollar</title>
-    <link rel="stylesheet" href="styles/about.css" />
-    <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link
       rel="stylesheet"
@@ -68,21 +66,23 @@
             <i class="fa-solid fa-bars"></i>
           </button>
 
-          <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li>
-              <a href="pricing.html"
-                >Pages <i class="fa-solid fa-chevron-down"></i
-              ></a>
-            </li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
+          <div class="right-nav">
+            <ul class="nav-links">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li>
+                <a href="projects.html"
+                  >Pages <i class="fa-solid fa-chevron-down"></i
+                ></a>
+              </li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
 
-          <div class="nav-cta">
-            <a href="#" class="btn btn--primary">Get Consulting</a>
+            <div class="nav-cta">
+              <a href="#" class="btn btn-primary">Get Consulting</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -180,12 +180,16 @@
 
     <section class="work-process">
       <div class="work-process-inner">
-        <p class="badge"><span></span> Work Process</p>
+        <div class="badge-container">
+          <span class="badge-dot"></span>
+          <p class="badge-text">Work Process</p>
+        </div>
         <h2 class="section-title">How We Work</h2>
+
         <div class="process-cards">
           <div class="process-card">
             <div class="process-icon teal">
-              <img src="icons/calendar.svg" alt="calendar" />
+              <img src="icons/calendar.svg" alt="Appointment" />
             </div>
             <h4>Make Appointment</h4>
             <p>
@@ -194,9 +198,10 @@
             </p>
             <a href="#" class="process-link">Testimonials</a>
           </div>
+
           <div class="process-card">
             <div class="process-icon purple">
-              <img src="icons/puzzle.svg" alt="hands" />
+              <img src="icons/puzzle.svg" alt="Consultation" />
             </div>
             <h4>Consultation</h4>
             <p>
@@ -205,9 +210,10 @@
             </p>
             <a href="#" class="process-link">Testimonials</a>
           </div>
+
           <div class="process-card">
             <div class="process-icon teal">
-              <img src="icons/verified.svg" alt="verified" />
+              <img src="icons/check.svg" alt="Service" />
             </div>
             <h4>Enjoy the Service</h4>
             <p>
@@ -219,7 +225,6 @@
         </div>
       </div>
     </section>
-
     <section class="stats">
       <div class="stats-container">
         <div class="stats-inner">

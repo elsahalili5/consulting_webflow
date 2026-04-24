@@ -1,5 +1,5 @@
-@use "style" as *;
-
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
 .get-in-touch {
   padding-top: 90px;
 }
@@ -23,13 +23,14 @@
 }
 
 .touch-title {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: $fs-h2;
+  font-weight: $fw-bold;
   color: $dark;
 }
 
 .touch-desc {
-  font-size: 18px;
+  font-size: $fs-subtitle;
+  font-weight: $fw-regular;
   color: $gray;
   line-height: 1.7;
 }
@@ -67,13 +68,14 @@
 }
 
 .contact-label {
-  font-size: 16px;
-  color: $text-gray;
+  font-size: $fs-body;
+  color: $gray;
+  font-weight: $fw-regular;
 }
 
 .contact-value {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: $fs-subtitle;
+  font-weight: $fw-regular;
   color: $dark;
 }
 
@@ -89,8 +91,8 @@
 }
 
 .callback-title {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: $fs-h2;
+  font-weight: $fw-bold;
   color: $dark;
   margin-bottom: 40px;
 }
@@ -118,11 +120,11 @@
   input,
   textarea {
     padding: 16px 18px;
-    border: 1px solid rgba(221, 221, 221, 1);
-    background-color: rgba(248, 248, 248, 1);
+    border: 1px solid #dddddd;
+    background-color: $light-gray;
     font-family: $font-main;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: $fs-body;
+    font-weight: $fw-regular;
     color: rgba(55, 57, 63, 1);
     outline: none;
 
@@ -137,62 +139,14 @@
 
   textarea {
     min-height: 222px;
-    resize: vertical;
   }
 }
 
 .form-submit {
   margin-top: 8px;
 }
-/* ===============================
-   RESPONSIVE FIXES
-================================ */
 
-/* ---------- 992px ---------- */
 @media (max-width: 992px) {
-  /* NAVBAR */
-  .nav-links {
-    display: none;
-  }
-
-  .nav-inner {
-    justify-content: space-between;
-    gap: 20px;
-    padding: 0 25px;
-  }
-
-  .btn-primary {
-    padding: 12px 22px;
-    font-size: 15px;
-  }
-
-  /* HERO */
-  .hero {
-    min-height: unset;
-
-    &-container {
-      flex-direction: column;
-    }
-
-    &-content,
-    &-image-box {
-      width: 100%;
-    }
-
-    &-content {
-      padding: 50px 40px;
-    }
-
-    &-title {
-      font-size: 42px;
-    }
-
-    &-image-box {
-      height: 300px;
-    }
-  }
-
-  /* GET IN TOUCH */
   .touch-inner {
     flex-direction: column;
     gap: 40px;
@@ -213,39 +167,12 @@
   }
 }
 @media (max-width: 768px) {
-  .topbar-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .topbar-left,
-  .topbar-right {
-    justify-content: center;
-  }
-
-  .hero {
-    &-content {
-      padding: 40px 25px;
-      text-align: center;
-    }
-
-    &-title {
-      font-size: 34px;
-      line-height: 1.2;
-    }
-
-    &-image-box {
-      height: 250px;
-    }
-  }
-
   .touch-title {
     font-size: 32px;
   }
 
   .touch-desc {
-    font-size: 16px;
+    font-size: $fs-body;
   }
 
   .touch-image {
@@ -270,36 +197,6 @@
 }
 
 @media (max-width: 576px) {
-  .topbar {
-    &-inner {
-      padding: 10px 15px;
-      align-items: flex-start;
-    }
-
-    &-left,
-    &-right {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-    }
-  }
-
-  .nav-inner {
-    padding: 0 15px;
-    gap: 10px;
-    height: auto;
-    min-height: 70px;
-  }
-
-  .logo {
-    font-size: 17px;
-  }
-
-  .btn-primary {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
   .hero {
     &-content {
       padding: 35px 20px;
@@ -327,11 +224,11 @@
   }
 
   .touch-title {
-    font-size: 26px;
+    font-size: $fs-h5;
   }
 
   .touch-desc {
-    font-size: 15px;
+    font-size: $fs-body;
   }
 
   .contact-items {
@@ -345,11 +242,11 @@
   }
 
   .contact-label {
-    font-size: 14px;
+    font-size: $fs-body;
   }
 
   .contact-value {
-    font-size: 15px;
+    font-size: $fs-body;
   }
 
   .callback-section {
@@ -357,7 +254,7 @@
   }
 
   .callback-title {
-    font-size: 26px;
+    font-size: $fs-h5;
   }
 
   .form-row {
@@ -376,10 +273,6 @@
 }
 
 @media (max-width: 400px) {
-  .hero-title {
-    font-size: 24px;
-  }
-
   .touch-title,
   .callback-title {
     font-size: 22px;

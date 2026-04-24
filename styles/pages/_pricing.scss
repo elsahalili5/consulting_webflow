@@ -1,14 +1,11 @@
-@import "main";
-
-//  PRICING HERO SECTION //
-
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
 
 .pricing-hero {
   @include hero-base("../images/hero-pricing.png", 50%);
 }
 
 // PRICING CARDS SECTION //
-
 
 .pricing-area {
   padding: 100px 0;
@@ -238,7 +235,6 @@
 }
 
 //  RESPONSIVE - PRICING CARDS //
-
 
 @include respond-to("desktop") {
   .pricing-area {

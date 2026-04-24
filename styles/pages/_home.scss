@@ -1,7 +1,7 @@
-@import "main";
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
 
 // HOME-HERO SECTION//
-
 
 .hero-split {
   position: relative;
@@ -137,12 +137,12 @@
 }
 
 // RESPONSIVE HERO
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .hero-split {
     display: block;
     position: relative;
     min-height: 600px;
-    background-image: url("../images/hero-home.png"); 
+    background-image: url("../images/hero-home.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -193,7 +193,7 @@
   }
 }
 
-@include respond-to('mobile') {
+@include respond-to("mobile") {
   .hero-split {
     min-height: 550px;
 
@@ -232,11 +232,11 @@
   .btn-video {
     justify-content: center;
     width: 100%;
-    margin-bottom: 50px
+    margin-bottom: 50px;
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .hero-split {
     min-height: 500px;
 
@@ -264,7 +264,7 @@
 
   .btn-video {
     font-size: $fs-small;
-    
+
     .play-icon {
       width: 40px;
       height: 40px;
@@ -273,7 +273,6 @@
 }
 
 //  INTRO SECTION //
-
 
 .intro {
   display: flex;
@@ -456,9 +455,9 @@
   }
 }
 
-// RESPONSIVE INTRO// 
+// RESPONSIVE INTRO//
 
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .intro {
     flex-direction: column;
 
@@ -486,7 +485,7 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .intro {
     &__left,
     &__right {
@@ -503,7 +502,7 @@
   }
 }
 
-@include respond-to('mobile') {
+@include respond-to("mobile") {
   .intro {
     &__left,
     &__right {
@@ -512,7 +511,7 @@
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .intro {
     &__left,
     &__right {
@@ -562,7 +561,6 @@
 
 //  CLIENT LOGOS //
 
-
 .client-logos {
   padding: 80px 0;
   background-color: $color-white;
@@ -593,7 +591,7 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .client-logos {
     padding: 50px 0;
 
@@ -607,7 +605,7 @@
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .client-logos {
     padding: 40px 0;
 
@@ -622,7 +620,6 @@
 }
 
 //  SERVICES SECTION //
-
 
 .services-section {
   padding: 100px 0;
@@ -742,9 +739,9 @@
   }
 }
 
-// RESPONSIVE SERVICES// 
+// RESPONSIVE SERVICES//
 
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -755,7 +752,7 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .services-section {
     padding: 60px 0;
   }
@@ -770,7 +767,7 @@
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .services-section {
     padding: 50px 0;
   }
@@ -796,7 +793,6 @@
 }
 
 // CHOOSE US SECTION //
-
 
 .choose-us {
   background-color: $color-dark;
@@ -938,9 +934,9 @@
   }
 }
 
-// RESPONSIVE CHOOSE US// 
+// RESPONSIVE CHOOSE US//
 
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .choose-us {
     min-height: auto;
     padding: 60px 0;
@@ -965,11 +961,12 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .choose-us {
     padding: 50px 0;
-    background: linear-gradient($color-overlay, $color-overlay),
-                url("../images/choose-us.png") center/cover no-repeat;
+    background:
+      linear-gradient($color-overlay, $color-overlay),
+      url("../images/choose-us.png") center/cover no-repeat;
 
     .text-area {
       background: transparent;
@@ -991,7 +988,7 @@
   }
 }
 
-@include respond-to('mobile') {
+@include respond-to("mobile") {
   .choose-us {
     padding: 40px 0;
 
@@ -1003,7 +1000,7 @@
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .choose-us {
     padding: 40px 0;
 
@@ -1063,7 +1060,6 @@
 }
 
 //  PROJECTS SECTION (HOME) //
-
 
 .projects-section {
   padding: 80px 0;
@@ -1143,7 +1139,7 @@
 }
 
 // RESPONSIVE PROJECTS (HOME)
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .projects-section {
     .section-header-flex {
       flex-direction: column;
@@ -1158,7 +1154,7 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .projects-section {
     padding: 50px 0;
 
@@ -1173,13 +1169,13 @@
   }
 }
 
-@include respond-to('mobile') {
+@include respond-to("mobile") {
   .projects-section {
     padding: 40px 0;
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .projects-section {
     padding: 40px 0;
 
@@ -1194,7 +1190,7 @@
 
     .projects-row {
       gap: 15px;
-      
+
       .project-item {
         height: 280px;
       }
@@ -1218,7 +1214,6 @@
 }
 
 //  TESTIMONIAL SECTION //
-
 
 .testimonial-section {
   padding: 100px 0;
@@ -1332,9 +1327,9 @@
   }
 }
 
-// RESPONSIVE TESTIMONIAL// 
+// RESPONSIVE TESTIMONIAL//
 
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .testimonial-section {
     .testimonial-flex-wrapper {
       flex-direction: column;
@@ -1347,7 +1342,7 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .testimonial-section {
     padding: 60px 0;
 
@@ -1358,7 +1353,7 @@
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .testimonial-section {
     padding: 50px 0;
 
@@ -1401,7 +1396,6 @@
 }
 
 // APPOINTMENT SECTION //
-
 
 .appointment-section {
   background-color: $color-purple;
@@ -1474,12 +1468,12 @@
 
         strong {
           font-size: 24px;
-          color: $color-white; 
+          color: $color-white;
           font-family: $font-main;
         }
         span {
           font-size: 12px;
-          color: $color-white; 
+          color: $color-white;
         }
       }
       p {
@@ -1629,7 +1623,7 @@
 
 // RESPONSIVE APPOINTMENT//
 
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .appointment-section {
     .appointment-wrapper {
       flex-direction: column;
@@ -1646,7 +1640,7 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .appointment-section {
     padding: 60px 0;
 
@@ -1657,7 +1651,7 @@
   }
 }
 
-@include respond-to('mobile') {
+@include respond-to("mobile") {
   .appointment-section {
     .info-side {
       .main-title {
@@ -1674,14 +1668,15 @@
     .form-container {
       padding: 25px;
 
-      input, textarea {
+      input,
+      textarea {
         padding: 14px 16px;
       }
     }
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .appointment-section {
     padding: 50px 0;
 
@@ -1743,7 +1738,8 @@
       .form-container {
         padding: 20px 15px;
 
-        input, textarea {
+        input,
+        textarea {
           padding: 12px 14px;
           font-size: $fs-small;
           margin-bottom: 15px;
@@ -1765,7 +1761,6 @@
 }
 
 //  TEAM SECTION (HOME) //
-
 
 .team-section {
   width: 100%;
@@ -1815,7 +1810,7 @@
 }
 
 // RESPONSIVE TEAM (HOME)
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .team-section .team-hero {
     height: 500px;
 
@@ -1831,13 +1826,13 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .team-section .team-hero {
     height: 400px;
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .team-section .team-hero {
     height: 320px;
 
@@ -1853,7 +1848,6 @@
 }
 
 //  NEWS SECTION //
-
 
 .news-section {
   padding: 100px 0;
@@ -1957,8 +1951,8 @@
           border-right: 1px solid rgba(0, 0, 0, 0.05);
 
           &:hover {
-            background-color: $color-dark; 
-            color: $color-white; 
+            background-color: $color-dark;
+            color: $color-white;
           }
         }
         .category-box {
@@ -1966,8 +1960,8 @@
           color: $color-dark;
 
           &:hover {
-            background-color: $color-dark; 
-            color: $color-white; 
+            background-color: $color-dark;
+            color: $color-white;
           }
         }
       }
@@ -2007,7 +2001,7 @@
 
 // RESPONSIVE NEWS//
 
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .news-section {
     .news-header {
       flex-direction: column;
@@ -2044,7 +2038,7 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .news-section {
     padding: 70px 0;
 
@@ -2084,7 +2078,7 @@
   }
 }
 
-@include respond-to('mobile') {
+@include respond-to("mobile") {
   .news-section {
     padding: 60px 0;
 
@@ -2137,7 +2131,7 @@
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .news-section {
     padding: 50px 0;
 
@@ -2176,7 +2170,6 @@
 
 // CTA SECTION //
 
-
 .cta-section {
   padding: 100px 0;
   width: 100%;
@@ -2191,8 +2184,9 @@
 
   .cta-card {
     width: 100%;
-    background: linear-gradient(rgba(64, 199, 163, 0.9), rgba(64, 199, 163, 0.9)),
-                url("../images/cta.png") no-repeat center center;
+    background:
+      linear-gradient(rgba(64, 199, 163, 0.9), rgba(64, 199, 163, 0.9)),
+      url("../images/cta.png") no-repeat center center;
     background-size: cover;
     border-radius: 0;
     padding: 80px 20px;
@@ -2267,19 +2261,19 @@
 
 // RESPONSIVE CTA//
 
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .cta-section .cta-content .cta-heading {
     font-size: 38px;
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .cta-section {
     padding: 60px 0;
   }
 }
 
-@include respond-to('mobile') {
+@include respond-to("mobile") {
   .cta-section {
     .cta-card {
       padding: 50px 20px;
@@ -2301,7 +2295,7 @@
   }
 }
 
-@include respond-to('mobile-small') {
+@include respond-to("mobile-small") {
   .cta-section {
     padding: 50px 0;
 

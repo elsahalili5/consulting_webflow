@@ -1,0 +1,32 @@
+// FONTS
+$font-main: "Inter", sans-serif;
+$font-heading: "Poppins", sans-serif;
+
+// FONT SIZES
+$fs-h1: 60px;
+$fs-h2: 40px;
+$fs-h3: 35px;
+$fs-h4: 30px;
+$fs-h5: 25px;
+$fs-h6: 22px;
+$fs-subtitle-lg: 20px;
+$fs-subtitle: 18px;
+$fs-body: 16px;
+$fs-small: 14px;
+
+// FONT WEIGHTS
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.1;
+}

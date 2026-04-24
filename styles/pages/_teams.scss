@@ -1,14 +1,10 @@
-@import "main";
-
-//  TEAMS HERO SECTION //
-
-
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
 .team-hero {
   @include hero-base("../images/hero-teams.png", 50%);
 }
 
 //  TEAMS GRID SECTION //
-
 
 .team-grid-area {
   padding: 100px 0;
@@ -181,7 +177,6 @@
 
 // RESPONSIVE - TEAMS GRID //
 
-
 @include respond-to("desktop") {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -205,7 +200,7 @@
 
   .team-card {
     height: auto;
-    
+
     .member-image-wrapper {
       .member-info-card {
         padding: 12px;
@@ -245,7 +240,7 @@
 
   .team-card {
     height: auto;
-    
+
     .member-image-wrapper {
       img {
         height: auto;
@@ -319,7 +314,6 @@
 
 // DEDICATED CARD SECTION //
 
-
 .dedicated-card-section {
   width: 100%;
   background-color: $color-white;
@@ -338,7 +332,7 @@
     overflow: hidden;
     border-radius: 8px;
 
-    @include respond-to('tablet') {
+    @include respond-to("tablet") {
       grid-template-columns: 1fr;
     }
   }
@@ -448,7 +442,6 @@
 }
 
 //  RESPONSIVE - DEDICATED CARD //
-
 
 @include respond-to("desktop") {
   .dedicated-card-section {

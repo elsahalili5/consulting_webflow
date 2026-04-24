@@ -1,7 +1,5 @@
-@import "main";
-
-//  PROJECTS HERO SECTION //
-
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
 
 .projects-hero {
   @include hero-base("../images/hero-projects.png", 50%);

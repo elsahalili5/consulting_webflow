@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+
+.top-bar {
+  background-color: $dark;
+  color: $white;
+  padding: 12px 0;
+  font-size: 14px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-family: $font-main;
+  }
+
+  i {
+    color: $primary;
+    margin-right: 8px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 15px;
+
+    a {
+      color: $white;
+      transition: 0.3s;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
