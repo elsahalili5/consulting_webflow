@@ -13,8 +13,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./style/home.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
   </head>
   <body>
     <div class="site-wrapper">
@@ -60,19 +60,26 @@
               <img src="./images/Logo.svg" alt="WhiteCollar Logo" />
             </div>
 
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-label="Open navigation"
+            >
               <i class="fa-solid fa-bars"></i>
             </button>
 
             <ul class="nav-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
               <li>
-                <a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
+                <a href="pricing.html"
+                  >Pages <i class="fa-solid fa-chevron-down"></i
+                ></a>
               </li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
 
             <div class="nav-cta">
@@ -111,7 +118,7 @@
             <img src="./images/hero-home.png" alt="WhiteCollar Team" />
           </div>
         </section>
-        
+
         <section class="intro" id="about">
           <div class="intro__left">
             <div class="intro__card">
@@ -737,15 +744,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      document.querySelectorAll(".navbar").forEach(function (navbar) {
-        var toggle = navbar.querySelector(".nav-toggle");
-        if (!toggle) return;
-        toggle.addEventListener("click", function () {
-          var isOpen = navbar.classList.toggle("is-open");
-          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        });
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
