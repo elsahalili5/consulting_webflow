@@ -37,7 +37,7 @@
   }
 
   &__text-container {
-    color: $color-white;
+    color: $white;
     max-width: 520px;
     width: 100%;
   }
@@ -50,7 +50,7 @@
     font-family: $font-heading;
 
     .text-mint {
-      color: $color-mint;
+      color: $primary;
     }
   }
 
@@ -64,7 +64,7 @@
 
 .label-hero {
   display: inline-block;
-  border-left: 15px solid $color-mint;
+  border-left: 15px solid $primary;
   padding-left: 11px;
   font-weight: $fw-semibold;
   font-size: $fs-small;
@@ -80,8 +80,8 @@
 }
 
 .btn--mint {
-  background-color: $color-mint;
-  color: $color-white;
+  background-color: $primary;
+  color: $white;
   padding: 14px 28px;
   text-decoration: none;
   font-weight: $fw-bold;
@@ -93,7 +93,7 @@
   transition: $transition-speed;
 
   &:hover {
-    background-color: darken($color-purple, 10%);
+    background-color: darken($secondary, 10%);
   }
 }
 
@@ -101,7 +101,7 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  color: $color-white;
+  color: $white;
   text-decoration: none;
   font-weight: $fw-semibold;
   font-size: $fs-body;
@@ -110,7 +110,7 @@
   .play-icon {
     width: 52px;
     height: 52px;
-    background-color: $color-purple;
+    background-color: $secondary;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -119,7 +119,7 @@
     transition: $transition-speed;
 
     i {
-      color: $color-white;
+      color: $white;
       font-size: $fs-small;
       margin-left: 3px;
     }
@@ -131,7 +131,7 @@
     }
 
     .video-text {
-      color: $color-mint;
+      color: $primary;
     }
   }
 }
@@ -282,7 +282,7 @@
 
   &__left {
     flex: 0 0 45%;
-    background-color: $color-light-bg;
+    background-color: $light;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -291,7 +291,7 @@
 
   &__card {
     max-width: 400px;
-    background: $color-white;
+    background: $white;
     box-shadow: $shadow-light;
 
     &-img {
@@ -307,12 +307,12 @@
         font-family: $font-heading;
         font-weight: $fw-bold;
         font-size: 24px;
-        color: $color-dark;
+        color: $dark;
         margin-bottom: 15px;
       }
       p {
         font-family: $font-main;
-        color: $color-gray;
+        color: $gray;
         font-size: 15px;
         line-height: 1.6;
         margin-bottom: 15px;
@@ -322,7 +322,7 @@
 
   &__right {
     flex: 0 0 55%;
-    background-color: $color-white;
+    background-color: $white;
     display: flex;
     align-items: center;
     padding: 80px 8%;
@@ -342,7 +342,7 @@
   .square-mint {
     width: 12px;
     height: 12px;
-    background-color: $color-mint;
+    background-color: $primary;
     display: inline-block;
   }
 
@@ -351,7 +351,7 @@
     font-weight: $fw-bold;
     font-size: 45px;
     line-height: 1.2;
-    color: $color-dark;
+    color: $dark;
     margin-bottom: 20px;
   }
 
@@ -359,7 +359,7 @@
     font-family: $font-main;
     font-size: $fs-body;
     line-height: 1.6;
-    color: $color-gray;
+    color: $gray;
     margin-bottom: 30px;
   }
 }
@@ -375,11 +375,11 @@
     gap: 10px;
     font-family: $font-main;
     font-weight: $fw-semibold;
-    color: $color-dark;
+    color: $dark;
     margin-bottom: 12px;
 
     i {
-      color: $color-purple;
+      color: $secondary;
       font-size: 18px;
     }
   }
@@ -401,7 +401,7 @@
 
   &__icon i {
     font-size: 28px;
-    color: $color-mint;
+    color: $primary;
   }
 
   &__text {
@@ -409,13 +409,13 @@
       font-family: $font-heading;
       font-weight: $fw-bold;
       font-size: 18px;
-      color: $color-dark;
+      color: $dark;
       margin-bottom: 5px;
     }
     p {
       font-family: $font-main;
       font-size: $fs-small;
-      color: $color-gray;
+      color: $gray;
       line-height: 1.4;
     }
   }
@@ -423,7 +423,7 @@
 
 .link-arrow {
   font-size: $fs-small;
-  color: $color-dark;
+  color: $dark;
   margin-top: 10px;
   display: inline-flex;
   align-items: center;
@@ -442,8 +442,8 @@
 
 .btn-blue {
   display: inline-block;
-  background-color: $color-purple;
-  color: $color-white;
+  background-color: $secondary;
+  color: $white;
   padding: 16px 40px;
   text-decoration: none;
   font-family: $font-main;
@@ -451,7 +451,7 @@
   transition: $transition-speed;
 
   &:hover {
-    background-color: darken($color-mint, 10%);
+    background-color: darken($primary, 10%);
   }
 }
 
@@ -563,9 +563,9 @@
 
 .client-logos {
   padding: 80px 0;
-  background-color: $color-white;
-  border-top: 1px solid $color-light-gray;
-  border-bottom: 1px solid $color-light-gray;
+  background-color: $white;
+  border-top: 1px solid $text-gray;
+  border-bottom: 1px solid $text-gray;
 
   &__grid {
     display: flex;
@@ -623,11 +623,11 @@
 
 .services-section {
   padding: 100px 0;
-  background-color: $color-white;
+  background-color: $white;
 
   .container {
     display: block;
-    max-width: $container-max;
+    max-width:1200px;
     margin: 0 auto;
   }
 
@@ -656,7 +656,7 @@
     .square-mint {
       width: 12px;
       height: 12px;
-      background-color: $color-mint;
+      background-color: $primary;
       display: inline-block;
     }
   }
@@ -670,7 +670,7 @@
 }
 
 .service-box {
-  background-color: $color-light-bg;
+  background-color: $light;
   padding: 50px 40px;
   display: flex;
   justify-content: space-between;
@@ -679,16 +679,16 @@
   transition: $transition-speed;
 
   &:hover {
-    background-color: $color-dark;
+    background-color: $dark;
     transform: translateY(-10px);
     box-shadow: $shadow-light;
 
     .service-box__content {
       h4 {
-        color: $color-white;
+        color: $white;
       }
       .read-more {
-        color: $color-mint;
+        color: $primary;
       }
     }
   }
@@ -701,7 +701,7 @@
       margin-bottom: 10px;
     }
     .read-more {
-      color: $color-purple;
+      color: $secondary;
       font-weight: $fw-semibold;
       text-decoration: none;
     }
@@ -714,24 +714,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $color-white;
+    color: $white;
     font-size: 24px;
 
     &.mint {
-      background-color: $color-mint;
+      background-color: $primary;
     }
     &.blue {
-      background-color: $color-purple;
+      background-color: $secondary;
     }
   }
 
   &--btn {
-    background-color: $color-purple;
+    background-color: $secondary;
     justify-content: center;
     text-align: center;
 
     a {
-      color: $color-white;
+      color: $white;
       font-size: 22px;
       font-weight: $fw-bold;
       text-decoration: none;
@@ -795,7 +795,7 @@
 // CHOOSE US SECTION //
 
 .choose-us {
-  background-color: $color-dark;
+  background-color: $dark;
   position: relative;
   width: 100%;
   min-height: 650px;
@@ -805,7 +805,7 @@
 
   .container {
     width: 100%;
-    max-width: $container-max;
+    max-width:1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -818,7 +818,7 @@
 
   .text-area {
     .subtitle {
-      color: $color-white;
+      color: $white;
       font-family: $font-main;
       font-weight: $fw-semibold;
       display: flex;
@@ -829,7 +829,7 @@
       .mint-square {
         width: 12px;
         height: 12px;
-        background: $color-mint;
+        background: $primary;
       }
     }
 
@@ -837,14 +837,14 @@
       font-family: $font-heading;
       font-size: $fs-h2;
       font-weight: $fw-bold;
-      color: $color-white;
+      color: $white;
       line-height: 1.2;
       margin-bottom: 25px;
     }
 
     .description {
       font-family: $font-main;
-      color: $color-white;
+      color: $white;
       margin-bottom: 40px;
       line-height: 1.6;
     }
@@ -867,24 +867,24 @@
       .circle {
         width: 60px;
         height: 60px;
-        border: 3px solid $color-mint;
+        border: 3px solid $primary;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: $fw-bold;
-        color: $color-white;
+        color: $white;
       }
 
       .stat-text {
         font-family: $font-main;
         font-size: $fs-small;
-        color: $color-white;
+        color: $white;
 
         strong {
           display: block;
           font-size: $fs-body;
-          color: $color-white !important;
+          color: $white;
           margin-bottom: 10px;
         }
       }
@@ -902,17 +902,17 @@
       gap: 10px;
       font-family: $font-main;
       font-size: 15px;
-      color: $color-white;
+      color: $white;
 
       i {
-        color: $color-mint;
+        color: $primary;
       }
       .stars {
-        color: #ffb342;
+        color:$orange;
         font-weight: $fw-bold;
       }
       .touch-link {
-        color: $color-mint;
+        color: $primary;
         text-decoration: underline;
         font-weight: $fw-bold;
       }
@@ -1083,7 +1083,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: $color-dark;
+      color: $dark;
       font-family: $font-main;
       font-weight: $fw-semibold;
       font-size: $fs-small;
@@ -1092,7 +1092,7 @@
       .mint-square {
         width: 12px;
         height: 12px;
-        background-color: $color-mint;
+        background-color: $primary;
       }
     }
 
@@ -1101,13 +1101,13 @@
       font-size: 36px;
       font-weight: $fw-bold;
       line-height: 1.2;
-      color: $color-dark;
+      color: $dark;
       margin: 0;
     }
 
     .btn-more-work {
-      background-color: $color-mint;
-      color: $color-white;
+      background-color: $primary;
+      color: $white;
       padding: 15px 35px;
       text-decoration: none;
       font-family: $font-main;
@@ -1115,7 +1115,7 @@
       transition: $transition-speed;
 
       &:hover {
-        background-color: darken($color-purple, 10%);
+        background-color: darken($secondary, 10%);
       }
     }
   }
@@ -1208,7 +1208,7 @@
 .section-divider {
   border: 0;
   height: 1px;
-  background-color: $color-gray;
+  background-color: $gray;
   max-width: 90%;
   margin: 60px auto;
 }
@@ -1217,7 +1217,7 @@
 
 .testimonial-section {
   padding: 100px 0;
-  background-color: $color-white;
+  background-color: $white;
 
   .container {
     max-width: 1000px;
@@ -1245,13 +1245,13 @@
       .mint-square {
         width: 10px;
         height: 10px;
-        background-color: $color-mint;
+        background-color: $primary;
       }
       .subtitle-text {
         font-family: $font-main;
         font-weight: $fw-semibold;
         font-size: $fs-small;
-        color: $color-dark;
+        color: $dark;
       }
     }
 
@@ -1259,14 +1259,14 @@
       font-family: $font-heading;
       font-size: 35px;
       font-weight: $fw-bold;
-      color: $color-dark;
+      color: $dark;
       line-height: 1.2;
       margin-bottom: 20px;
     }
 
     .intro-desc {
       font-family: $font-main;
-      color: $color-gray;
+      color: $gray;
       line-height: 1.6;
     }
   }
@@ -1277,7 +1277,7 @@
     gap: 20px;
 
     .testimonial-card {
-      background-color: $color-light-bg;
+      background-color: $light;
       padding: 35px;
       flex: 1;
       display: flex;
@@ -1305,11 +1305,11 @@
           }
           span {
             font-family: $font-main;
-            color: $color-gray;
+            color: $gray;
             font-size: $fs-small;
           }
           .stars {
-            color: #ffb342;
+            color:$orange;
             height: 20px;
             width: auto;
           }
@@ -1319,7 +1319,7 @@
       .user-quote {
         font-family: $font-main;
         font-style: italic;
-        color: $color-gray;
+        color: $gray;
         font-size: 15px;
         line-height: 1.7;
       }
@@ -1398,9 +1398,9 @@
 // APPOINTMENT SECTION //
 
 .appointment-section {
-  background-color: $color-purple;
+  background-color: $secondary;
   padding: 100px 0;
-  color: $color-white;
+  color: $white;
 
   .appointment-wrapper {
     display: flex;
@@ -1423,7 +1423,7 @@
       .mint-square {
         width: 12px;
         height: 12px;
-        background-color: $color-mint;
+        background-color: $primary;
       }
       .subtitle-text {
         font-family: $font-heading;
@@ -1448,7 +1448,7 @@
     }
 
     .experience-box {
-      background-color: $color-mint;
+      background-color: $primary;
       padding: 35px;
       display: flex;
       align-items: center;
@@ -1458,7 +1458,7 @@
       .circle-stats {
         width: 105px;
         height: 105px;
-        border: 2px solid $color-purple;
+        border: 2px solid $secondary;
         border-radius: 50%;
         display: flex;
         flex-direction: column;
@@ -1468,12 +1468,12 @@
 
         strong {
           font-size: 24px;
-          color: $color-white;
+          color: $white;
           font-family: $font-main;
         }
         span {
           font-size: 12px;
-          color: $color-white;
+          color: $white;
         }
       }
       p {
@@ -1499,7 +1499,7 @@
         .step-icon {
           width: 24px;
           height: 24px;
-          background-color: $color-mint;
+          background-color: $primary;
           border-radius: 50%;
           display: flex;
           justify-content: center;
@@ -1532,7 +1532,7 @@
         .mint-square {
           width: 12px;
           height: 12px;
-          background-color: $color-mint;
+          background-color: $primary;
         }
         .subtitle-text {
           font-family: $font-heading;
@@ -1552,7 +1552,7 @@
     }
 
     .form-container {
-      background-color: $color-white;
+      background-color: $white;
       padding: 50px;
       flex: 1;
       display: flex;
@@ -1570,17 +1570,17 @@
       .form-row-item {
         width: 100%;
         padding: 18px 20px;
-        background-color: $color-light-bg;
+        background-color: $light;
         border: 1px solid #f2f2f2;
         font-family: $font-main;
         font-size: 15px;
-        color: $color-dark;
+        color: $dark;
         outline: none;
         margin-bottom: 20px;
         box-sizing: border-box;
 
         &::placeholder {
-          color: $color-gray;
+          color: $gray;
         }
       }
 
@@ -1602,8 +1602,8 @@
       }
 
       .btn-submit {
-        background-color: $color-mint;
-        color: $color-dark;
+        background-color: $primary;
+        color: $dark;
         padding: 16px 40px;
         border: none;
         font-family: $font-main;
@@ -1614,7 +1614,7 @@
         transition: $transition-speed;
 
         &:hover {
-          background-color: darken($color-purple, 10%);
+          background-color: darken($secondary, 10%);
         }
       }
     }
@@ -1796,7 +1796,7 @@
       border-radius: 2px;
 
       .section-title {
-        color: $color-white;
+        color: $white;
         font-family: $font-main;
         font-size: 30px;
         font-weight: $fw-bold;
@@ -1851,10 +1851,10 @@
 
 .news-section {
   padding: 100px 0;
-  background-color: $color-white;
+  background-color: $white;
 
   .container {
-    max-width: $container-max;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -1878,12 +1878,12 @@
         .mint-square {
           width: 12px;
           height: 12px;
-          background-color: $color-mint;
+          background-color: $primary;
         }
         .subtitle-text {
           font-family: $font-main;
           font-weight: $fw-semibold;
-          color: $color-dark;
+          color: $dark;
         }
       }
 
@@ -1891,7 +1891,7 @@
         font-family: $font-heading;
         font-size: $fs-h2;
         font-weight: $fw-bold;
-        color: $color-dark;
+        color: $dark;
         margin: 0;
       }
     }
@@ -1900,8 +1900,8 @@
   .header-right {
     .btn-more {
       display: inline-block;
-      background-color: $color-dark;
-      color: $color-white;
+      background-color: $dark;
+      color: $white;
       padding: 15px 35px;
       text-decoration: none;
       font-family: $font-main;
@@ -1909,7 +1909,7 @@
       transition: $transition-speed;
 
       &:hover {
-        background-color: $color-purple;
+        background-color: $secondary;
       }
     }
   }
@@ -1929,7 +1929,7 @@
       .post-meta {
         display: flex;
         height: 50px;
-        color: $color-white;
+        color: $white;
         font-family: $font-main;
         font-size: $fs-small;
 
@@ -1942,26 +1942,26 @@
         }
 
         .date-box {
-          background-color: $color-purple;
+          background-color: $secondary;
         }
 
         .author-box {
-          background-color: $color-mint;
-          color: $color-dark;
+          background-color: $primary;
+          color: $dark;
           border-right: 1px solid rgba(0, 0, 0, 0.05);
 
           &:hover {
-            background-color: $color-dark;
-            color: $color-white;
+            background-color: $dark;
+            color: $white;
           }
         }
         .category-box {
-          background-color: $color-mint;
-          color: $color-dark;
+          background-color: $primary;
+          color: $dark;
 
           &:hover {
-            background-color: $color-dark;
-            color: $color-white;
+            background-color: $dark;
+            color: $white;
           }
         }
       }
@@ -1974,19 +1974,19 @@
           font-size: 24px;
           font-weight: $fw-bold;
           margin-bottom: 15px;
-          color: $color-dark;
+          color: $dark;
           line-height: 1.3;
         }
 
         p {
           font-family: $font-main;
-          color: $color-dark;
+          color: $dark;
           line-height: 1.6;
           margin-bottom: 20px;
         }
 
         .read-more {
-          color: $color-purple;
+          color: $secondary;
           text-decoration: none;
           font-family: $font-main;
           font-weight: $fw-bold;
@@ -2178,7 +2178,7 @@
 
   .cta-container {
     width: 100%;
-    max-width: $container-max;
+    max-width: 1200px;
     padding: 0 15px;
   }
 
@@ -2198,7 +2198,7 @@
 
   .cta-content {
     max-width: 800px;
-    color: $color-dark;
+    color: $dark;
 
     .cta-badge {
       display: flex;
@@ -2213,7 +2213,7 @@
       .cta-square {
         width: 12px;
         height: 12px;
-        background-color: $color-purple;
+        background-color: $secondary;
       }
     }
 
@@ -2225,7 +2225,7 @@
       margin-bottom: 25px;
 
       span {
-        color: $color-white;
+        color: $white;
       }
     }
 
@@ -2241,8 +2241,8 @@
 
     .cta-button {
       display: inline-block;
-      background-color: $color-purple;
-      color: $color-white;
+      background-color: $secondary;
+      color: $white;
       padding: 18px 40px;
       text-decoration: none;
       font-family: $font-main;
@@ -2252,7 +2252,7 @@
       transition: $transition-speed;
 
       &:hover {
-        background-color: $color-mint;
+        background-color: $primary;
         transform: translateY(-2px);
       }
     }

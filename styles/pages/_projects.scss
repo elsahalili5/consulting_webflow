@@ -1,15 +1,15 @@
 @use "../abstracts/variables" as *;
+@use "../components/_hero.scss" as *;
 @use "../base/typography" as *;
 
-.projects-hero {
-  @include hero-base("../images/hero-projects.png", 50%);
-}
+
+
 
 // PROJECTS GRID SECTION //
 
 .projects-grid-area {
   padding: 100px 0;
-  background-color: $color-light-bg;
+  background-color: $light;
   display: flex;
   flex-direction: column;
 
@@ -18,6 +18,7 @@
     flex-direction: column;
     align-items: center;
   }
+
 
   .grid-header {
     text-align: center;
@@ -34,27 +35,27 @@
       .marker {
         width: 12px;
         height: 12px;
-        background-color: $color-mint;
+        background-color: $primary;
         display: inline-block;
       }
 
       span {
         font-size: $fs-small;
         font-weight: $fw-semibold;
-        color: $color-dark;
+        color: $dark;
         letter-spacing: 1px;
       }
     }
 
     h2 {
       font-size: 36px;
-      color: $color-dark;
+      color: $dark;
       margin-bottom: 20px;
       font-weight: $fw-bold;
     }
 
     p {
-      color: $color-gray;
+      color: $gray;
       line-height: 1.6;
       font-size: $fs-body;
     }
@@ -68,7 +69,7 @@
 }
 
 .project-card {
-  background: $color-white;
+  background: $white;
   transition: $transition-speed;
   border-radius: 8px;
   overflow: hidden;
@@ -107,19 +108,19 @@
 
       h3 {
         font-size: 20px;
-        color: $color-dark;
+        color: $dark;
         margin-bottom: 8px;
         font-weight: $fw-bold;
         transition: $transition-speed;
 
         &:hover {
-          color: $color-purple;
+          color: $secondary;
         }
       }
 
       .project-date {
         font-size: $fs-small;
-        color: $color-gray;
+        color: $gray;
         font-weight: $fw-medium;
         display: flex;
         align-items: center;
@@ -127,7 +128,7 @@
 
         i {
           font-size: 12px;
-          color: $color-mint;
+          color: $primary;
         }
       }
     }
@@ -135,11 +136,11 @@
     .project-arrow {
       width: 42px;
       height: 42px;
-      background-color: $color-light-bg;
+      background-color: $light;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $color-purple;
+      color: $secondary;
       transition: $transition-speed;
       flex-shrink: 0;
       border-radius: 50%;
@@ -151,8 +152,8 @@
   }
 
   &:hover .project-arrow {
-    background-color: $color-purple;
-    color: $color-white;
+    background-color: $secondary;
+    color: $white;
   }
 }
 

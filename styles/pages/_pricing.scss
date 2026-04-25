@@ -1,15 +1,13 @@
 @use "../abstracts/variables" as *;
+@use "../components/_hero.scss" as *;
 @use "../base/typography" as *;
 
-.pricing-hero {
-  @include hero-base("../images/hero-pricing.png", 50%);
-}
 
 // PRICING CARDS SECTION //
 
 .pricing-area {
   padding: 100px 0;
-  background-color: $color-white;
+  background-color: $white;
 
   .pricing-header {
     text-align: center;
@@ -26,14 +24,14 @@
       .marker {
         width: 12px;
         height: 12px;
-        background-color: $color-mint;
+        background-color: $primary;
         display: inline-block;
       }
 
       span {
         font-size: $fs-small;
         font-weight: $fw-semibold;
-        color: $color-dark;
+        color: $dark;
         letter-spacing: 1px;
       }
     }
@@ -41,7 +39,7 @@
     .section-title {
       font-size: $fs-h2;
       font-weight: $fw-bold;
-      color: $color-dark;
+      color: $dark;
       margin: 0;
       line-height: 1.2;
       font-family: $font-heading;
@@ -52,14 +50,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    max-width: $container-max;
+    max-width:1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
 
   .pricing-card {
-    background: $color-white;
-    border: 1px solid $color-light-bg;
+    background: $white;
+    border: 1px solid $light;
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
@@ -73,7 +71,7 @@
 
     h3 {
       font-size: 24px;
-      color: $color-dark;
+      color: $dark;
       margin-bottom: 15px;
       font-weight: $fw-bold;
       font-family: $font-heading;
@@ -82,20 +80,20 @@
     .price-tag {
       font-size: 48px;
       font-weight: 800;
-      color: $color-dark;
+      color: $dark;
       margin-bottom: 5px;
       font-family: $font-heading;
 
       span {
         font-size: $fs-body;
         font-weight: $fw-medium;
-        color: $color-gray;
+        color: $gray;
       }
     }
 
     .billed-label {
-      background-color: $color-mint;
-      color: $color-dark;
+      background-color: $primary;
+      color: $dark;
       font-size: 13px;
       font-weight: $fw-semibold;
       padding: 6px 16px;
@@ -106,7 +104,7 @@
 
       &.transparent {
         background-color: rgba(107, 124, 255, 0.1);
-        color: $color-purple;
+        color: $secondary;
       }
     }
 
@@ -118,21 +116,21 @@
 
       li {
         padding: 12px 0;
-        color: $color-gray;
+        color: $gray;
         font-size: 15px;
-        border-bottom: 1px solid $color-light-gray;
+        border-bottom: 1px solid $light;
         display: flex;
         align-items: center;
         gap: 10px;
 
         i {
-          color: $color-mint;
+          color: $primary;
           font-size: $fs-small;
           width: 18px;
         }
 
         strong {
-          color: $color-dark;
+          color: $dark;
           font-weight: $fw-bold;
         }
 
@@ -154,28 +152,28 @@
       display: inline-block;
 
       &-purple {
-        background-color: $color-purple;
-        color: $color-white;
+        background-color: $secondary;
+        color: $white;
 
         &:hover {
-          background-color: darken($color-purple, 10%);
+          background-color: darken($secondary, 10%);
         }
       }
 
       &-white {
         background-color: transparent;
-        color: $color-purple;
-        border: 2px solid $color-purple;
+        color: $secondary;
+        border: 2px solid $secondary;
 
         &:hover {
-          background-color: $color-purple;
-          color: $color-white;
+          background-color: $secondary;
+          color: $white;
         }
       }
     }
 
     &.featured {
-      background-color: $color-purple;
+      background-color: $secondary;
       border: none;
       position: relative;
       transform: scale(1.02);
@@ -187,8 +185,8 @@
         top: -12px;
         left: 50%;
         transform: translateX(-50%);
-        background-color: $color-mint;
-        color: $color-dark;
+        background-color: $primary;
+        color: $dark;
         padding: 6px 20px;
         font-size: 12px;
         font-weight: $fw-bold;
@@ -199,7 +197,7 @@
       h3,
       .price-tag,
       .price-tag span {
-        color: $color-white;
+        color: $white;
       }
 
       .feature-list li {
@@ -207,27 +205,28 @@
         border-bottom-color: rgba(255, 255, 255, 0.15);
 
         i {
-          color: $color-mint;
+          color: $primary;
         }
 
         strong {
-          color: $color-white;
+          color: $white;
         }
       }
 
       .billed-label {
         background-color: rgba(255, 255, 255, 0.2);
-        color: $color-white;
+        color: $white;
       }
-      // Shto këtë brenda .pricing-card.featured
+
+      //pricing-card.featured
       .btn {
-        background-color: $color-white;
-        color: $color-purple;
+        background-color: $white;
+        color: $secondary;
         border: none;
 
         &:hover {
-          background-color: $color-mint;
-          color: $color-white;
+          background-color: $primary;
+          color: $white;
         }
       }
     }
