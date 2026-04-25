@@ -1,325 +1,152 @@
 @use "../abstracts/variables" as *;
 @use "../base/typography" as *;
 
+// TEAM GRID SECTION //
 
-
-//  TEAMS GRID SECTION //
 
 .team-grid-area {
-  padding: 100px 0;
-  background-color: $white;
+    padding: 100px 0; 
+    background-color: $white;
+    width: 100%;
 
-  .container {
-    max-width:1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-}
-
-.section-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 60px;
-
-  .subtitle-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
-
-    .marker {
-      width: 12px;
-      height: 12px;
-      background-color: $primary;
-      display: inline-block;
+    .container {
+       
+        max-width: 1220px; 
+        margin: 0 auto;
+        padding: 0; 
     }
-
-    span {
-      font-size: $fs-small;
-      font-weight: $fw-semibold;
-      color: $dark;
-      letter-spacing: 1px;
-    }
-  }
-
-  h2 {
-    font-size: $fs-h2;
-    font-weight: $fw-bold;
-    color: $dark;
-    margin: 0;
-    font-family: $font-heading;
-  }
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 380px); 
+    justify-content: center; 
+    gap: 30px; 
+    width: 100%;
 }
 
 .team-card {
-  background: transparent;
-  overflow: hidden;
-  transition: $transition-speed;
-  height: 530px;
-
-  .member-image-wrapper {
     position: relative;
+    width: 380px;  
+    height: 530px; 
     overflow: hidden;
+    background: transparent;
 
-    img {
-      width: 100%;
-      height: 500px;
-      aspect-ratio: 1 / 1.15;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-      will-change: transform;
-    }
+    .member-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 500px; 
+        overflow: hidden;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: $secondary;
-      opacity: 0;
-      transition: opacity $transition-speed;
-      z-index: 1;
-      will-change: opacity;
-    }
-
-    .social-hover {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      gap: 15px;
-      z-index: 2;
-      opacity: 0;
-      transition: opacity $transition-speed;
-      will-change: opacity;
-
-      a {
-        width: 45px;
-        height: 45px;
-        background-color: $white;
-        color: $secondary;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        transition: $transition-speed;
-
-        i {
-          font-size: 18px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+            transition: transform 0.5s ease;
         }
 
-        &:hover {
-          background-color: $primary;
-          color: $white;
-          transform: translateY(-3px);
+       
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba($secondary, 0.7); 
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
         }
-      }
-    }
 
-    .member-info-card {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      background: $white;
-      padding: 25px;
-      text-align: center;
-      z-index: 2;
-      transition: $transition-speed;
+        
+        .social-hover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -20%); 
+            display: flex;
+            gap: 15px;
+            z-index: 5;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
 
-      h3 {
-        font-size: 18px;
-        font-weight: $fw-bold;
-        color: $dark;
-        margin: 0 0 5px 0;
-        font-family: $font-heading;
-        transition: color $transition-speed;
-      }
+            a {
+                width: 45px;
+                height: 45px;
+                background-color: $primary;
+                color: $white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
 
-      p {
-        font-size: 13px;
-        color: $gray;
-        margin: 0;
-        font-family: $font-main;
-        transition: color $transition-speed;
-      }
+                &:hover {
+                    background-color: $white;
+                    color: $primary;
+                }
+            }
+        }
+
+
+        .member-info-card {
+            position: absolute;
+            bottom: 20px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%; 
+            background: $white;
+            padding: 25px 10px;
+            text-align: center;
+            z-index: 6;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
     }
 
     &:hover {
-      &::before {
-        opacity: 0.9;
-      }
-
-      .social-hover {
-        opacity: 1;
-      }
-
-      img {
-        transform: scale(1.05);
-      }
+        .member-image-wrapper {
+            &::before { opacity: 1; }
+            img { transform: scale(1.05); }
+            .social-hover {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
-  }
 }
 
-// RESPONSIVE - TEAMS GRID //
-
+// RESPONSIVE - 
 @include respond-to("desktop") {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-}
-
-@include respond-to("tablet") {
-  .team-grid-area {
-    padding: 70px 0;
-  }
-
-  .section-header h2 {
-    font-size: 32px;
-  }
-
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .team-card {
-    height: auto;
-
-    .member-image-wrapper {
-      .member-info-card {
-        padding: 12px;
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-
-        h3 {
-          font-size: $fs-body;
-        }
-
-        p {
-          font-size: 12px;
-        }
-      }
+    .team-grid-area .container {
+        max-width: 95%; 
     }
-  }
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, 380px);
+        justify-content: center;
+    }
 }
 
 @include respond-to("mobile") {
-  .team-grid-area {
-    padding: 50px 0;
-  }
-
-  .section-header {
-    margin-bottom: 40px;
-
-    h2 {
-      font-size: 28px;
-    }
-  }
-
-  .team-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .team-card {
-    height: auto;
-
-    .member-image-wrapper {
-      img {
+    .team-card {
+        width: 100%; 
+        max-width: 380px;
         height: auto;
-        aspect-ratio: 1 / 1;
-      }
-
-      .member-info-card {
-        padding: 12px;
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-
-        h3 {
-          font-size: $fs-body;
-        }
-
-        p {
-          font-size: 12px;
-        }
-      }
-
-      &::before {
-        display: none;
-      }
-
-      .social-hover {
-        display: none;
-      }
+        padding: 20px;
     }
-
-    &:hover {
-      .member-info-card {
-        background-color: $white;
-
-        h3 {
-          color: $dark;
-        }
-
-        p {
-          color: $gray;
-        }
-      }
+    .team-grid {
+        grid-template-columns: 1fr;
     }
-  }
 }
 
-@include respond-to("mobile-small") {
-  .team-grid-area {
-    padding: 40px 0;
-  }
-
-  .section-header h2 {
-    font-size: 24px;
-  }
-
-  .team-card .member-image-wrapper .member-info-card {
-    padding: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-
-    h3 {
-      font-size: $fs-small;
-    }
-
-    p {
-      font-size: 11px;
-    }
-  }
-}
-
-// DEDICATED CARD SECTION //
-
+// 3. DEDICATED CARD SECTION// 
 .dedicated-card-section {
   width: 100%;
   background-color: $white;
   padding: 0 0 100px;
 
   .custom-container {
-    max-width:1200px;
+    max-width: $container-max;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -329,9 +156,9 @@
     grid-template-columns: 1fr 1fr;
     background-color: $dark;
     overflow: hidden;
-    border-radius: 8px;
+   
 
-    @include respond-to("tablet") {
+    @include respond-to('tablet') {
       grid-template-columns: 1fr;
     }
   }
@@ -395,7 +222,7 @@
     background: rgba(255, 255, 255, 0.05);
     padding: 20px 30px;
     width: fit-content;
-    border-radius: 8px;
+    
 
     .circle-progress {
       width: 90px;
@@ -433,14 +260,14 @@
 
       p {
         color: $gray;
-        font-size: 13px;
+        font-size: 12px;
         margin: 0;
       }
     }
   }
 }
 
-//  RESPONSIVE - DEDICATED CARD //
+//  RESPONSIVE - DEDICATED CARD// 
 
 @include respond-to("desktop") {
   .dedicated-card-section {
@@ -504,8 +331,8 @@
     }
 
     .stats-card {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row;
+      align-items: center;
       width: 100%;
       gap: 15px;
       padding: 20px;
@@ -513,6 +340,7 @@
       .circle-progress {
         width: 80px;
         height: 80px;
+        min-width: 80px;
       }
 
       .stats-info {

@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 @use "../base/typography" as *;
 
+
 // FOOTER //
 
 .footer {
@@ -10,7 +11,7 @@
   font-family: $font-main;
 
   .footer-container {
-    max-width:1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -26,6 +27,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+    flex-wrap: wrap;
 
     .footer-brand {
       display: flex;
@@ -117,9 +119,10 @@
           margin-bottom: 12px;
 
           a {
-            color: $gray;
+            color: $white;
             text-decoration: none;
             font-size: 15px;
+            transition: $transition-speed;
 
             &.active {
               color: $primary;
@@ -128,47 +131,71 @@
 
             &:hover {
               color: $white;
+              padding-left: 5px;
             }
           }
         }
       }
     }
 
+    // SUBSCRIBE FORM //
     .footer-subscribe {
       .subscribe-card {
-        background-color:$dark;
-        padding: 40px;
-
-        h3 {
-          font-size: 24px;
-          margin-bottom: 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        
+       h6{
+          font-size: 20px;
+          margin-bottom: 12px;
+          color: $white;
+          font-weight: $fw-semibold;
         }
-
+        
         p {
           font-size: $fs-small;
-          color: $gray;
-          margin-bottom: 25px;
+          color: $white;
+          margin-bottom: 20px;
+          line-height: 1.5;
         }
-
+        
         .form-group {
           display: flex;
-          min-width: 0;
-
+          gap: 0;
+          
           input {
             flex: 1;
-            min-width: 0;
-            padding: 15px;
-            border: none;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             outline: none;
-          }
+            background-color: $white;
 
+            // // color: $white;
+            // font-size: $fs-small;
+            
+            &::placeholder {
+              color: $gray;
+            }
+            
+            &:focus {
+              border-color: $primary;
+            }
+          }
+          
           button {
             background-color: $secondary;
             color: $white;
             border: none;
             padding: 0 20px;
+            border-radius: 0 4px 4px 0;
             font-weight: $fw-semibold;
+            font-size: $fs-small;
             cursor: pointer;
+            transition: $transition-speed;
+            white-space: nowrap;
+            
+            &:hover {
+              background-color: $primary;
+            }
           }
         }
       }
@@ -179,6 +206,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     font-size: $fs-small;
     color: $gray;
 
@@ -205,6 +234,7 @@
       a {
         color: $white;
         font-size: $fs-body;
+        transition: $transition-speed;
 
         &:hover {
           color: $primary;
@@ -213,6 +243,219 @@
     }
   }
 }
+
+// RESPONSIVE (mbetet i njëjtë si e ke)
+
+// .footer {
+//   background-color: $dark;
+//   padding: 80px 0 40px;
+//   color: $white;
+//   font-family: $font-main;
+
+//   .footer-container {
+//     max-width:1200px;
+//     margin: 0 auto;
+//     padding: 0 20px;
+//   }
+
+//   .footer-divider {
+//     border: 0;
+//     border-top: 1px solid rgba(255, 255, 255, 0.1);
+//     margin: 30px 0;
+//   }
+
+//   .footer-top {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     gap: 24px;
+
+//     .footer-brand {
+//       display: flex;
+//       align-items: center;
+//       gap: 15px;
+
+//       .footer-logo-img {
+//         width: 180px;
+//         height: auto;
+//         display: block;
+//         transition: $transition-speed;
+
+//         &:hover {
+//           transform: scale(1.05);
+//         }
+//       }
+//     }
+
+//     .footer-contacts {
+//       display: flex;
+//       gap: 40px;
+//       flex-wrap: wrap;
+
+//       .contact-item {
+//         display: flex;
+//         align-items: center;
+//         gap: 12px;
+
+//         .icon-circle {
+//           width: 50px;
+//           height: 50px;
+//           background: rgba(255, 255, 255, 0.05);
+//           border-radius: 50%;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+
+//           i {
+//             color: $primary;
+//             font-size: 18px;
+//           }
+//         }
+
+//         .contact-text {
+//           display: flex;
+//           flex-direction: column;
+
+//           .label {
+//             font-weight: $fw-bold;
+//             font-size: $fs-small;
+//           }
+
+//           .value {
+//             color: $gray;
+//             font-size: 13px;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .footer-main {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1.5fr;
+//     gap: 40px;
+//     padding: 20px 0;
+
+//     .footer-col {
+//       h3 {
+//         color: $primary;
+//         font-size: 18px;
+//         margin-bottom: 25px;
+//         display: flex;
+//         align-items: center;
+
+//         .marker {
+//           width: 8px;
+//           height: 8px;
+//           background-color: $secondary;
+//           margin-right: 10px;
+//         }
+//       }
+
+//       ul {
+//         list-style: none;
+//         padding: 0;
+
+//         li {
+//           margin-bottom: 12px;
+
+//           a {
+//             color: $white;
+//             text-decoration: none;
+//             font-size: 15px;
+
+//             &.active {
+//               color: $primary;
+//               text-decoration: underline;
+//             }
+
+//             &:hover {
+//               color: $white;
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     .footer-subscribe {
+//       .subscribe-card {
+//         background-color:$dark;
+//         padding: 40px;
+
+//         h3 {
+//           font-size: 24px;
+//           margin-bottom: 10px;
+//         }
+
+//         p {
+//           font-size: $fs-small;
+//           color: $gray;
+//           margin-bottom: 25px;
+//         }
+
+//         .form-group {
+//           display: flex;
+//           min-width: 0;
+
+//           input {
+//             flex: 1;
+//             min-width: 0;
+//             padding: 15px;
+//             border: none;
+//             outline: none;
+//           }
+
+//           button {
+//             background-color: $secondary;
+//             color: $white;
+//             border: none;
+//             padding: 0 20px;
+//             font-weight: $fw-semibold;
+//             cursor: pointer;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .footer-bottom {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     font-size: $fs-small;
+//     color: $gray;
+
+//     .mint {
+//       color: $primary;
+//     }
+
+//     .purple {
+//       color: $secondary;
+//       font-weight: $fw-bold;
+//     }
+
+//     .footer-socials {
+//       display: flex;
+//       align-items: center;
+//       gap: 15px;
+
+//       span {
+//         font-weight: $fw-bold;
+//         color: $white;
+//         margin-right: 5px;
+//       }
+
+//       a {
+//         color: $white;
+//         font-size: $fs-body;
+
+//         &:hover {
+//           color: $primary;
+//         }
+//       }
+//     }
+//   }
+// }
 
 //  RESPONSIVE //
 
@@ -279,7 +522,7 @@
     }
 
     .footer-main {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
 
