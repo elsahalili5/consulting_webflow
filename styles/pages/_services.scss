@@ -347,7 +347,6 @@
   flex: 1;
   display: flex;
   gap: 24px;
-  align-items: stretch;
 }
 
 .testimonial-card {
@@ -490,23 +489,9 @@
   .badge-wrapper {
     width: 100%;
   }
-  .why-title {
-    text-align: center;
-  }
-  .why-left {
-    text-align: center;
-  }
+
   .why-stat-desc {
     padding: 0;
-  }
-  .why-stat-header {
-    justify-content: center;
-  }
-  .testimonial-title {
-    text-align: center;
-  }
-  .testimonial-desc {
-    text-align: center;
   }
 }
 

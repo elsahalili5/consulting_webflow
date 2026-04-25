@@ -223,7 +223,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  z-index: 1;
+  // z-index: 1;
 }
 
 .stat-item {
@@ -374,7 +374,6 @@
 
 .team-img {
   position: relative;
-  height: 532px;
 
   img {
     width: 100%;
@@ -492,7 +491,6 @@
     border-right: none;
   }
 
-  /* team */
   .team-card {
     width: calc(50% - 12px);
   }

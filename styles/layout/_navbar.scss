@@ -13,7 +13,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
   }
 
   .logo img {
@@ -57,6 +56,11 @@
     }
   }
 
+  .right-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
   // Desktop menu
   .nav-links {
     display: flex;

@@ -156,3 +156,28 @@
   }
 }
 
+/* Rregullimi specifik për iPad Air dhe Tablet (Portrait) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    width: 70%; // E zgjerojmë pak që teksti të marrë frymë
+    padding: 60px 40px;
+    justify-content: center; // E qendrojmë vertikalisht përmbajtjen brenda box-it
+    background: rgba(55, 57, 63, 0.95); // Pak më i errët për lexueshmëri
+  }
+
+  .hero-title {
+    font-size: 52px; // Madhësi e ndërmjetme
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+  }
+
+  .hero-image-box {
+    height: 600px; // Sigurohemi që imazhi të ketë lartësi të mjaftueshme pas tekstit
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

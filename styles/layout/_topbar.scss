@@ -1,7 +1,6 @@
 @use "../abstracts/variables" as *;
 @use "../base/typography" as *;
 
-
 .top-bar {
   background-color: $dark;
   color: $white;
@@ -10,13 +9,12 @@
   height: 50px;
 
   .container {
-    max-width: $container-max + 50px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 0 20px;
   }
 
   &__left,
@@ -42,7 +40,7 @@
       color: $white;
       font-size: $fs-small;
       transition: $transition-speed;
-      
+
       &:hover {
         color: $primary;
       }
@@ -51,7 +49,7 @@
 }
 
 // RESPONSIVE TOPBAR
-@include respond-to('desktop') {
+@include respond-to("desktop") {
   .top-bar {
     height: auto;
     padding: 10px 0;
@@ -60,7 +58,8 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-    &__left, &__right {
+    &__left,
+    &__right {
       gap: 12px;
       flex-wrap: wrap;
       justify-content: center;
@@ -73,22 +72,24 @@
   }
 }
 
-@include respond-to('tablet') {
+@include respond-to("tablet") {
   .top-bar {
     .container {
       flex-direction: column;
       align-items: center;
     }
-    &__left, &__right {
+    &__left,
+    &__right {
       justify-content: center;
       text-align: center;
     }
   }
 }
 
-@include respond-to('mobile') {
+@include respond-to("mobile") {
   .top-bar {
-    &__left, &__right {
+    &__left,
+    &__right {
       flex-direction: column;
       gap: 8px;
     }
