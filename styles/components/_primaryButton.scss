@@ -13,6 +13,7 @@
   border: none;
   font-size: $fs-subtitle;
   cursor: pointer;
+  border: 2px solid $secondary;
 
   &:hover {
     background-color: $white;
