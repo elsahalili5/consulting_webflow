@@ -152,14 +152,14 @@
     .container {
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between; // Kthehet në normal
+      justify-content: space-between; 
     }
 
     .logo {
       order: 1;
       width: auto;
       text-align: left;
-      margin-right: 0; // Heq distancën e desktop-it
+      margin-right: 0; 
       margin-bottom: 0;
 
       img {
@@ -198,7 +198,7 @@
       flex-direction: column;
       gap: 0;
       margin-top: 15px;
-      margin-right: 0; // Heq distancën e desktop-it
+      margin-right: 0; 
       padding: 0;
 
       li {
@@ -226,18 +226,18 @@
       justify-content: space-between;
     }
 
-    // Logo në të majtë
+    
     .logo {
       order: 1;
-      width: auto;        // Ndrysho nga 100% në auto
-      text-align: left;   // Ndrysho nga center në left
-      margin-right: auto; // Shtyn toggle dhe buton në të djathtë
+      width: auto;        
+      text-align: left;   
+      margin-right: auto; 
       margin-bottom: 0;
       
       img { height: 30px; }
     }
 
-    // Toggle në të djathtë
+    
     .nav-toggle {
       display: flex;
       order: 2;
@@ -247,7 +247,7 @@
       margin-right: 12px;
     }
 
-    // Butoni në të djathtë
+    
     .nav-cta {
       order: 3;
       margin-left: 0;
@@ -291,9 +291,8 @@
   }
 }
 
-// ============================================
-// DROPDOWN MENU - PËR TË GJITHA PAJISJET
-// ============================================
+//  DROPDOWN MENU - PËR TË GJITHA PAJISJET
+
 
 .navbar .nav-links {
   .dropdown {
@@ -347,7 +346,7 @@
       }
     }
     
-    // Shfaq dropdown në hover për desktop
+    
     &:hover {
       .dropdown-menu {
         opacity: 1;
@@ -362,7 +361,7 @@
   }
 }
 
-// Për tablet dhe mobile - kliko për të hapur
+//  tablet & mobile //
 @media (max-width: 991px) {
   .navbar .nav-links {
     .dropdown {
