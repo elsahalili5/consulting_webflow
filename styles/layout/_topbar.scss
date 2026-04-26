@@ -2,21 +2,20 @@
 @use "../base/typography" as *;
 
 
-.top-bar {
+
+ .top-bar {
   background-color: $dark;
   color: $white;
   padding: 12px 0;
-  font-size: $fs-small;
-  height: 50px;
+  
 
   .container {
-    max-width: $container-max + 50px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 0 20px;
   }
 
   &__left,
@@ -34,9 +33,10 @@
 
   .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     padding-left: 15px;
+    
 
     a {
       color: $white;
