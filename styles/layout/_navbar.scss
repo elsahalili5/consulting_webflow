@@ -33,7 +33,6 @@
     height: 48px;
     background-color: $secondary;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     flex-direction: column;
     align-items: center;
@@ -93,7 +92,6 @@
     color: $white;
     padding: 12px 24px;
     text-decoration: none;
-    border-radius: 4px;
     font-weight: $fw-semibold;
     font-size: $fs-body;
     transition: $transition-speed;
@@ -118,7 +116,7 @@
 @media (min-width: 1025px) {
   .navbar {
     .container {
-      justify-content: flex-start; // Ndrysho vetëm në desktop
+      justify-content: space-between; // Ndrysho vetëm në desktop
     }
 
     .logo {

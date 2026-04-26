@@ -17,3 +17,13 @@
 @use "pages/projects";
 @use "pages/services";
 @use "pages/teams";
+
+
+// Barazimi i topbar dhe navbar (override)
+.top-bar .container,
+.navbar .container {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}

@@ -88,7 +88,7 @@
   }
 
   .hero-title {
-    font-size: 48px;
+    font-size: $fs-h1;
   }
 }
 @media (max-width: 992px) {
@@ -97,7 +97,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 765px) {
   .hero-container {
     display: flex;
     flex-direction: column;
@@ -131,53 +131,124 @@
     text-align: center;
   }
 }
+// ============================================//
+// RESPONSIVE - HERO
+// ============================================
 
-@media (max-width: 576px) {
-  .hero-content {
-    padding: 40px 20px;
-  }
-
-  .hero-title {
-    font-size: $fs-h4;
-  }
-
-  .hero-image-box {
-    height: 220px;
-  }
-}
-
-@media (max-width: 400px) {
-  .hero-title {
-    font-size: 24px;
-  }
-
-  .hero-desc {
-    font-size: $fs-small;
-  }
-}
-
-/* Rregullimi specifik për iPad Air dhe Tablet (Portrait) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero-content {
-    width: 70%; // E zgjerojmë pak që teksti të marrë frymë
-    padding: 60px 40px;
-    justify-content: center; // E qendrojmë vertikalisht përmbajtjen brenda box-it
-    background: rgba(55, 57, 63, 0.95); // Pak më i errët për lexueshmëri
-  }
-
-  .hero-title {
-    font-size: 52px; // Madhësi e ndërmjetme
-  }
-
-  .hero-desc {
-    font-size: 1.1rem;
-  }
-
-  .hero-image-box {
-    height: 600px; // Sigurohemi që imazhi të ketë lartësi të mjaftueshme pas tekstit
-    img {
-      height: 100%;
-      object-fit: cover;
+// Tablet (768px - 1024px) - si desktop
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    .hero-content {
+      width: 50%;
+      padding: 50px 40px;
+      justify-content: center;  
+      align-items: flex-start; 
+     
+      
+      .hero-title {
+        font-size: 42px;
+      }
+      
+      .hero-desc {
+        font-size: $fs-body;
+      }
+    }
+    
+    .hero-image-box {
+      width: 50%;
+      margin-left: 50%;
+      
+      img {
+        min-height: 450px;
+      }
     }
   }
 }
+
+// Mobile (max 767px) - 
+@media (max-width: 767px) {
+  .hero {
+    position: relative;
+    min-height: 450px;
+    
+    .hero-container {
+      position: relative;
+      height: 100%;
+    }
+    
+    .hero-image-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      margin-left: 0;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    .hero-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 450px;
+      z-index: 2;
+      background: rgba(55, 57, 63, 0.88);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      
+      .badge-container {
+        justify-content: center;
+      }
+      
+      .hero-title {
+        text-align: center;
+        font-size: 34px;
+      }
+      
+      .hero-desc {
+        text-align: center;
+        font-size: $fs-body;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+// Big Tablet (900px - 1100px)
+@media (min-width: 900px) and (max-width: 1100px) {
+  .hero {
+    .hero-content {
+      width: 55%;
+      padding: 50px 35px;
+      
+      .hero-title {
+        font-size: 42px;
+      }
+    }
+    
+    .hero-image-box {
+      width: 45%;
+      margin-left: 55%;
+    }
+  }
+}
+@media (min-width: 1200px) and (max-width: 1280px) {
+  .hero-content {
+    padding: 50px 40px;
+    
+    .hero-title {
+      font-size: 44px;
+    }
+  }
+}
+
