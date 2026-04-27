@@ -96,23 +96,22 @@
   }
 }
 
-// ============================================
-// RESPONSIVE - TË GJITHA PAJISJET
-// ============================================
+//  RESPONSIVE - TË GJITHA PAJISJET
 
-// Desktop (min 1025px) - menu horizontale me distancat e kërkuara
+
+// Desktop (min 1025px)
 @media (min-width: 1025px) {
   .navbar {
     .container {
-      justify-content: space-between; // Ndrysho vetëm në desktop
+      justify-content: space-between; 
     }
 
     .logo {
-      margin-right: 195px; // Largësia logo → nav links
+      margin-right: 195px; 
     }
 
     .nav-links {
-      margin-right: 40px; // Largësia nav links → buton
+      margin-right: 40px; 
     }
 
     .nav-cta {
